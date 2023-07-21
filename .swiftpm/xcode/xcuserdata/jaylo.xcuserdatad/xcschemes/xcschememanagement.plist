@@ -7,9 +7,14 @@
 		<key>BVPlayer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>BVPlayerUtilities.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>bvplayer-ios-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>BVPlayerTests</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BVPlayerUtilities</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>bvplayer-ios</key>
 		<dict>
 			<key>primary</key>
 			<true/>
