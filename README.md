@@ -11,3 +11,5 @@ https://github.com/jaylo1979/bvplayerutility
 You should see the package appear. Choose the version you want to use and click on add package.
 
 Then you can start developing your app using the BV Player Utility native SDK.
+
+Jaylo
