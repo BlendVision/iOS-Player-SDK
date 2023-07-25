@@ -5,7 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "BVPlayer",
-    defaultLocalization: "en",
     platforms: [
         .iOS(.v14)
     ],
@@ -17,18 +16,14 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        //.package(url: "https://github.com/bitmovin/player-ios-core.git", exact: "2.4.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-//        .target(
-//            name: "BVPlayer",
-//            dependencies: ["HLSParser", "SwiftWebVTT"]),
         .binaryTarget(
             name: "BVPlayer",
-            url: "https://github.com/BlendVision/iOS-Player-SDK/releases/download/2.4.1/KKSPlayer-2.4.1.42.xcframework.zip",
-            checksum: "7c87f0688c2dda3ad582839fb7df7c32c2d8a68b22e96a0089dcf59d01c7eaf7"
+            url: "https://github.com/BlendVision/iOS-Player-SDK/releases/download/2.4.0/KKSPlayer-2.4.0.41.xcframework.zip",
+            checksum: "205e980dab41f311359725dbaf9e3ad6f127ca5e5981b1c7a690c9c82ba6dd9d"
         ),
         .binaryTarget(
             name: "SwiftWebVTT",
