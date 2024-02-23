@@ -17,7 +17,7 @@ To add the `BVPLAYER` SDK as a dependency to your project, you have two options:
 To integrate using Xcode 13, open your Project file and specify it in `Project > Package Dependencies` using the following URL:
 
 ```
-https://github.com/BlendVision/bvplayer-ios
+https://github.com/BlendVision/iOS-Player-SDK
 ```
 
 #### Using `Package.swift`
