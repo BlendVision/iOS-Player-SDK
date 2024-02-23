@@ -1,4 +1,4 @@
-# BVPlayer
+# iOS-Player-SDK
 
 - [Installation](#installation)
     - [Swift Package Manager](#using-swift-package-manager)
@@ -47,7 +47,7 @@ let package = Package(
 Executing `swift build` from the command line is currently not supported. Open the Package in Xcode if you are developing another Package depending on `BVPlayer`.
 
 ### Add the Player SDK to the Project directly
-When using Xcode, go to the `General` page or your app target and add the SDK bundle (`KKSPlayer.xcframework`) under `Linked Frameworks and Libraries`. The latest SDK for iOS can be downloaded [here](https://github.com/BlendVision/iOS-Player-SDK/releases/download/2.4.1/KKSPlayer-2.4.1.42.xcframework.zip).
+When using Xcode, go to the `General` page or your app target and add the SDK bundle (`BVPlayer.xcframework`) under `Linked Frameworks and Libraries`. The latest SDK for iOS can be downloaded [here](https://github.com/BlendVision/iOS-Player-SDK/releases/download/3.0.0/BVPlayer-3.0.0.7953271_Release.xcframework.zip).
 
 ## Getting Started
 ### Configure the license key
