@@ -10,7 +10,7 @@
 ## Installation
 To add the `BVPLAYER` SDK as a dependency to your project, you have two options: Swift Package Manager or adding the SDK bundle directly.
 
-## Dependency
+### Dependency
 iOS Player SDK has a dependency on the GoogleCast framework version 4.7.1.04.11. This dependency enables integration with Google Cast for casting media content to Chromecast devices.
 
 ### Using [Swift Package Manager](https://swift.org/package-manager/)
