@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BVPlayer-Package.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>BVPlayer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -15,6 +20,11 @@
 			<integer>2</integer>
 		</dict>
 		<key>bvplayer-ios-Package.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>iOS-Player-SDK-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -38,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>bvplayer-ios</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>iOS-Player-SDK</key>
 		<dict>
 			<key>primary</key>
 			<true/>

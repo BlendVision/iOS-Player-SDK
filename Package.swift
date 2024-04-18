@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BVPlayer",
-            targets: ["BVPlayer"]),
+            targets: ["BVPlayerTarget"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,8 +22,18 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "BVPlayer",
-            url: "https://github.com/BlendVision/iOS-Player-SDK/releases/download/3.0.0/BVPlayer-3.0.0.7953271_Release.xcframework.zip",
-            checksum: "f7a662404f0b2fa8e0acc7b5e4a55ee43de3399049d4c5448781679127a2e077"
-        )
+            path: "Sources/Frameworks/BVPlayer.xcframework"
+        ),
+        .binaryTarget(
+            name: "BVPSE",
+            path: "Sources/Frameworks/BVPSE.xcframework"
+        ),
+        .target(
+            name: "BVPlayerTarget",
+            dependencies: [
+                "BVPlayer",
+                "BVPSE"
+            ]
+        ),
     ]
 )
