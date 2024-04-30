@@ -542,13 +542,13 @@ SWIFT_CLASS("_TtC8BVPlayer20UniPlayerControlView")
 
 
 
-
 @class UITouch;
 @class UIEvent;
 
 @interface UniPlayerView (SWIFT_EXTENSION(BVPlayer))
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 @end
+
 
 
 
