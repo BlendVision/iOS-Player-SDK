@@ -1,4 +1,0 @@
-framework module BVPSE {
-  header "BVPSE-Swift.h"
-  requires objc
-}

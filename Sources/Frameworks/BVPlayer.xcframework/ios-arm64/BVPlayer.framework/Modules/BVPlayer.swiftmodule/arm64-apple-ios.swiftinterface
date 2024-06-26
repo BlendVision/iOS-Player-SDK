@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
-import BVPSE
 import CoreMedia
 import DeveloperToolsSupport
 import Foundation
@@ -59,6 +58,10 @@ public enum PLLogSeverity : Swift.Int, Swift.CustomStringConvertible, Swift.Case
     get
   }
 }
+@_hasMissingDesignatedInitializers public class SubtitleHandler {
+  public func subtitle(forTime time: Foundation.TimeInterval) -> Swift.String?
+  @objc deinit
+}
 public struct MasterPlaylist {
   public var media: [BVPlayer.MasterPlaylist.Media]
   public var streams: [BVPlayer.MasterPlaylist.Stream]
@@ -90,6 +93,9 @@ public struct MasterPlaylist {
 extension BVPlayer.UniSource {
   public func thumbnail(forTime time: Foundation.TimeInterval) -> BVPlayer.UniThumbnail?
 }
+extension BVPlayer.UniSource {
+  public func subtitle(forTime time: Foundation.TimeInterval) -> Swift.String?
+}
 public struct LogData {
   public var eventType: Swift.String
   public var eventName: Swift.String
@@ -98,6 +104,16 @@ public struct LogData {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class UniPlayerControlView : UIKit.UIView {
   @objc deinit
+}
+public struct UniUISettingFactory {
+  public enum SettingGroup {
+    case quality, audio, subtitle, speed
+    public static func == (a: BVPlayer.UniUISettingFactory.SettingGroup, b: BVPlayer.UniUISettingFactory.SettingGroup) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
 }
 @_hasMissingDesignatedInitializers public class UniBufferMediaTypeConfig {
   public var forwardDuration: Foundation.TimeInterval
@@ -113,12 +129,24 @@ public struct LogData {
   public init(license licenseUrl: Foundation.URL?)
   @objc deinit
 }
-public struct UniVideoQuality : Swift.Comparable {
+public enum VideoQualityCategory : Swift.Int {
+  case general
+  case standard
+  case saving
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc open class UniVideoQuality : ObjectiveC.NSObject, Swift.Comparable {
   public static func < (lhs: BVPlayer.UniVideoQuality, rhs: BVPlayer.UniVideoQuality) -> Swift.Bool
-  public let bitrate: Swift.UInt
-  public let width: Swift.UInt
-  public let height: Swift.UInt
-  public static func == (a: BVPlayer.UniVideoQuality, b: BVPlayer.UniVideoQuality) -> Swift.Bool
+  final public let bitrate: Swift.UInt
+  final public let width: Swift.UInt
+  final public let height: Swift.UInt
+  final public let category: BVPlayer.VideoQualityCategory
+  public init(identifier: Swift.String, label: Swift.String, bitrate: Swift.UInt, width: Swift.UInt, height: Swift.UInt, category: BVPlayer.VideoQualityCategory = .general)
+  @objc deinit
 }
 public enum KKSPlayerModuleInfo {
   public static var moduleVersion: Swift.String {
@@ -476,6 +504,23 @@ public class WebVTTParser {
   public func parse() throws -> BVPlayer.WebVTT
   @objc deinit
 }
+public protocol UniSettingDetailViewControllerDelegate : ObjectiveC.NSObjectProtocol {
+  func controller(_ controller: BVPlayer.UniSettingDetailViewController, didSelectItem item: BVPlayer.UniUISettingItem)
+  func controllerDidPop(_ controller: BVPlayer.UniSettingDetailViewController)
+}
+@objc @_Concurrency.MainActor(unsafe) open class UniSettingDetailViewController : BVPlayer.UniUITableViewController {
+  @_Concurrency.MainActor(unsafe) final public let config: BVPlayer.UniUISettingConfig
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any BVPlayer.UniSettingDetailViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) public init(config: BVPlayer.UniUISettingConfig)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) open func popViewController()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
 extension Foundation.Bundle {
   public var shortVersionString: Swift.String? {
     get
@@ -632,7 +677,7 @@ extension BVPlayer.UniUserInterfaceListener {
   public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExit event: BVPlayer.PictureInPictureExitEvent)
   public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExited event: BVPlayer.PictureInPictureExitedEvent)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class UniPlayerView : UIKit.UIView {
+@objc @_Concurrency.MainActor(unsafe) open class UniPlayerView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var isPictureInPicture: Swift.Bool {
     get
   }
@@ -649,14 +694,18 @@ extension BVPlayer.UniUserInterfaceListener {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var player: BVPlayer.UniPlayer!
   @_Concurrency.MainActor(unsafe) weak public var fullscreenHandler: (any BVPlayer.UniFullscreenHandler)?
   @_Concurrency.MainActor(unsafe) public init(player: BVPlayer.UniPlayer, frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) convenience public init(player: BVPlayer.UniPlayer, frame: CoreFoundation.CGRect, playerViewConfig: BVPlayer.PlayerViewConfig)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
   @_Concurrency.MainActor(unsafe) public func enterFullscreen()
   @_Concurrency.MainActor(unsafe) public func exitFullscreen()
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSourceLoadedEvent event: BVPlayer.UniSourceLoadedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnReadyEvent event: any BVPlayer.UniEvent)
+  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnReadyEvent event: any BVPlayer.UniEvent)
+  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnVideoQualityChangedEvent event: BVPlayer.UniVideoPlaybackQualityChangedEvent)
+  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnTimeChangedEvent event: BVPlayer.UniTimeChangedEvent)
 }
 extension BVPlayer.UniPlayerView {
   @_Concurrency.MainActor(unsafe) public func add(listener: any BVPlayer.UniUserInterfaceListener)
@@ -722,14 +771,20 @@ public struct PlayerViewConfig {
   }
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class UniSettingViewController : BVPlayer.UniUITableViewController {
+@objc @_Concurrency.MainActor(unsafe) open class UniSettingViewController : BVPlayer.UniUITableViewController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) public init(player: BVPlayer.UniPlayer)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) open func makeDetailViewController(with config: BVPlayer.UniUISettingConfig) -> BVPlayer.UniSettingDetailViewController
   @objc deinit
+}
+extension BVPlayer.UniSettingViewController : BVPlayer.UniSettingDetailViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public func controller(_ controller: BVPlayer.UniSettingDetailViewController, didSelectItem item: BVPlayer.UniUISettingItem)
+  @_Concurrency.MainActor(unsafe) public func controllerDidPop(_ controller: BVPlayer.UniSettingDetailViewController)
 }
 @_hasMissingDesignatedInitializers public class UniLogEvent {
   public var name: BVPlayer.UniLogEvent.EventName {
@@ -983,6 +1038,7 @@ extension BVPlayer.UniLogEvent {
     case deviceId
     case deviceCategory
     case devicePlatform
+    case seekTo
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1135,15 +1191,18 @@ extension Swift.Optional {
 public protocol UniPlayerViewControllerDelegate : ObjectiveC.NSObjectProtocol {
   func playerViewController(_ controller: BVPlayer.UniPlayerViewController, didTapShareButtonWithURL url: Foundation.URL?)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UniPlayerViewController : UIKit.UIViewController {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UniPlayerViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var player: BVPlayer.UniPlayer?
   @_Concurrency.MainActor(unsafe) public var sourceConfig: BVPlayer.UniSourceConfig?
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any BVPlayer.UniPlayerViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) public var playerView: BVPlayer.UniControllerPlayerView?
+  @_Concurrency.MainActor(unsafe) public var playerView: BVPlayer.UniPlayerView?
   @objc deinit
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func makeView(with player: BVPlayer.UniPlayer, playerViewConfig: BVPlayer.PlayerViewConfig) -> BVPlayer.UniPlayerView
+  @_Concurrency.MainActor(unsafe) open func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSettingPressed event: BVPlayer.UniUIEvent)
+  @_Concurrency.MainActor(unsafe) open func dismiss(completion: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
@@ -1152,7 +1211,6 @@ extension BVPlayer.UniPlayerViewController {
 }
 extension BVPlayer.UniPlayerViewController : BVPlayer.UniUserInterfaceListener {
   @_Concurrency.MainActor(unsafe) public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveControlViewChanged event: BVPlayer.UniControlViewChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSettingPressed event: BVPlayer.UniUIEvent)
 }
 extension BVPlayer.UniPlayerViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
@@ -1279,7 +1337,7 @@ public struct MediaPlaylist {
   @_Concurrency.MainActor(unsafe) public init(rootViewController: UIKit.UIViewController, detents: [UIKit.UISheetPresentationController.Detent] = [.medium(), .large()])
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UniUITableViewController : UIKit.UITableViewController {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UniUITableViewController : UIKit.UITableViewController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableView.Style)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -1307,9 +1365,22 @@ public protocol UniLoggerListener : ObjectiveC.NSObjectProtocol {
   public var deviceIdDescription: Swift.String {
     get
   }
+  public var pseEnabled: Swift.Bool?
   public func add(listener: any BVPlayer.UniLoggerListener)
   public func remove(listener: any BVPlayer.UniLoggerListener)
   @objc deinit
+}
+@_hasMissingDesignatedInitializers open class UniUISettingItem {
+  final public let identifier: Swift.String
+  final public let group: BVPlayer.UniUISettingFactory.SettingGroup
+  final public let label: Swift.String
+  final public let rawValue: Swift.Float
+  public var category: BVPlayer.VideoQualityCategory
+  @objc deinit
+}
+public struct UniUISettingConfig {
+  public let selectedIdentifier: Swift.String?
+  public let items: [BVPlayer.UniUISettingItem]
 }
 @_hasMissingDesignatedInitializers public class UniPlayerFactory {
   public static func create() -> BVPlayer.UniPlayer
@@ -1368,6 +1439,10 @@ public struct UniCommonProperty {
     get
   }
   public var isPlaying: Swift.Bool
+  public var isPaused: Swift.Bool
+  public var isStalled: Swift.Bool {
+    get
+  }
   public var availableVideoQualities: [BVPlayer.UniVideoQuality] {
     get
   }
@@ -1408,9 +1483,14 @@ public struct UniCommonProperty {
   public var isLive: Swift.Bool {
     get
   }
-  public var pseEnabled: Swift.Bool {
+  public var isPSECapabilityEnabled: Swift.Bool {
     get
-    set
+  }
+  weak public var videoContentView: UIKit.UIView? {
+    get
+  }
+  public var currentItem: AVFoundation.AVPlayerItem? {
+    get
   }
   public var isLoopEnabled: Swift.Bool {
     get
@@ -1431,11 +1511,6 @@ extension BVPlayer.UniPlayer : AVFoundation.AVAssetResourceLoaderDelegate {
 extension BVPlayer.UniPlayer {
   public func setAudio(track identifier: Swift.String)
   public func setSubtitle(track identifier: Swift.String?)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class UniControllerPlayerView : BVPlayer.UniPlayerView {
-  @_Concurrency.MainActor(unsafe) override public init(player: BVPlayer.UniPlayer, frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) override final public func player(_ player: BVPlayer.UniPlayer, didReceiveOnReadyEvent event: any BVPlayer.UniEvent)
-  @objc deinit
 }
 public enum AnalyticsField : Swift.String {
   case token
@@ -1460,12 +1535,13 @@ public enum RemoteControlType : Swift.Int {
 }
 @_hasMissingDesignatedInitializers public class RemoteControlConfig {
   public var prepareSource: ((_ type: BVPlayer.RemoteControlType, _ sourceConfig: BVPlayer.UniSourceConfig) -> BVPlayer.UniSourceConfig?)?
+  public var usesExternalPlaybackWhileExternalScreenIsActive: Swift.Bool
   @objc deinit
 }
 extension BVPlayer.UniPlayerView : BVPlayer.UniPlayerListener {
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPlayingEvent event: any BVPlayer.UniEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPausedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnTimeChangedEvent event: BVPlayer.UniTimeChangedEvent)
+  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSubtitleChangedEvent event: BVPlayer.UniSubtitleChangedEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSeekEvent event: BVPlayer.UniSeekEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSeekedEvent event: any BVPlayer.UniEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnStallStartedEvent event: any BVPlayer.UniEvent)
@@ -1473,8 +1549,6 @@ extension BVPlayer.UniPlayerView : BVPlayer.UniPlayerListener {
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPlaybackFinishedEvent event: any BVPlayer.UniEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSourceLoadEvent event: BVPlayer.UniSourceLoadEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnAudioChangedEvent event: BVPlayer.UniAudioChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSubtitleChangedEvent event: BVPlayer.UniSubtitleChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnVideoQualityChangedEvent event: BVPlayer.UniVideoPlaybackQualityChangedEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceivePlaybackSpeedChangedEvent event: BVPlayer.UniPlaybackSpeedChangedEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadEvent event: BVPlayer.UniSourceUnloadEvent)
   @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadedEvent event: BVPlayer.UniSourceUnloadedEvent)
@@ -1609,6 +1683,20 @@ public struct CastOptions {
   public var customData: [Swift.String : Swift.String]
   public init(images: [BVPlayer.CastImage], custom data: [Swift.String : Swift.String] = [:])
 }
+@objc @_inheritsConvenienceInitializers public class PSEConfig : ObjectiveC.NSObject {
+  public enum PSEModeType {
+    case standard
+    case saving
+    public static func == (a: BVPlayer.PSEConfig.PSEModeType, b: BVPlayer.PSEConfig.PSEModeType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var mode: BVPlayer.PSEConfig.PSEModeType
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc public class UniSourceConfig : ObjectiveC.NSObject {
   final public let url: Foundation.URL
   final public let type: BVPlayer.UniSourceType
@@ -1616,6 +1704,7 @@ public struct CastOptions {
   public var sourceDescription: Swift.String?
   public var posterSource: Foundation.URL?
   public var drmConfig: BVPlayer.UniDrmConfig?
+  public var pseConfig: BVPlayer.PSEConfig
   public var thumbnailTrack: BVPlayer.UniThumbnailTrack?
   public var sharedURL: Foundation.URL?
   public var features: [BVPlayer.UniFeature]
@@ -1626,6 +1715,11 @@ public struct CastOptions {
 extension BVPlayer.PLLogSeverity : Swift.Equatable {}
 extension BVPlayer.PLLogSeverity : Swift.Hashable {}
 extension BVPlayer.PLLogSeverity : Swift.RawRepresentable {}
+extension BVPlayer.UniUISettingFactory.SettingGroup : Swift.Equatable {}
+extension BVPlayer.UniUISettingFactory.SettingGroup : Swift.Hashable {}
+extension BVPlayer.VideoQualityCategory : Swift.Equatable {}
+extension BVPlayer.VideoQualityCategory : Swift.Hashable {}
+extension BVPlayer.VideoQualityCategory : Swift.RawRepresentable {}
 extension BVPlayer.UniEventName : Swift.Equatable {}
 extension BVPlayer.UniEventName : Swift.Hashable {}
 extension BVPlayer.UniEventName : Swift.RawRepresentable {}
@@ -1664,3 +1758,5 @@ extension BVPlayer.UniSourceType : Swift.RawRepresentable {}
 extension BVPlayer.UniFeature : Swift.Equatable {}
 extension BVPlayer.UniFeature : Swift.Hashable {}
 extension BVPlayer.UniFeature : Swift.RawRepresentable {}
+extension BVPlayer.PSEConfig.PSEModeType : Swift.Equatable {}
+extension BVPlayer.PSEConfig.PSEModeType : Swift.Hashable {}
