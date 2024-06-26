@@ -24,15 +24,10 @@ let package = Package(
             name: "BVPlayer",
             path: "Sources/Frameworks/BVPlayer.xcframework"
         ),
-        .binaryTarget(
-            name: "BVPSE",
-            path: "Sources/Frameworks/BVPSE.xcframework"
-        ),
         .target(
             name: "BVPlayerTarget",
             dependencies: [
-                "BVPlayer",
-                "BVPSE"
+                "BVPlayer"
             ]
         ),
     ]
