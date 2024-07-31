@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Assets.car</key>
-		<data>
-		ohUOTIjMbxk0bGHaF0mh/HNoAOA=
-		</data>
 		<key>Headers/BVPlayer-Swift.h</key>
 		<data>
-		bmIwYEu4CwSec/4CtSKSI3UvG9g=
+		/7wDiLF5vptxWW5YQ8eTLeiB21A=
 		</data>
 		<key>Headers/KKSPlayer.h</key>
 		<data>
@@ -18,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Yc2pTjtVxYqv8C+E79W3DJm+P+Y=
+		OZaCC3OhnY+xAs4sJwP6S7eoG/4=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		P0o7ltaI4U/wzwZgJzu/phlfHvo=
+		319ue7Fx43hOn6yZPGHqs5OTsHc=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		72WHz2sDIqHIa9KxRAV+hkrmOxo=
+		B68naPJO4mc0dF1LdI74f3fQ22Q=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		i53uGHBY1Wmt5b7zqFWVQE+EB7s=
+		8iX08t8P7/ifQW5vrotFEFua7Fs=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		72WHz2sDIqHIa9KxRAV+hkrmOxo=
+		B68naPJO4mc0dF1LdI74f3fQ22Q=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0sq+JSEDC3wzXDGYj5ufBWTFvlU=
+		vmpQB08Q5AiGFzcqONb+zQ+wWOE=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		P0o7ltaI4U/wzwZgJzu/phlfHvo=
+		319ue7Fx43hOn6yZPGHqs5OTsHc=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		F6BT7IshAekRR8hZAdnPmxNgNOU=
+		mIzBHB/5RRDNR6cOylg1vnizkd8=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JtoZe/ox2etvqA5wlZan7kSjpSA=
+		QHHBYeW7ER7vZDH+LsD6z/ljDig=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		F6BT7IshAekRR8hZAdnPmxNgNOU=
+		mIzBHB/5RRDNR6cOylg1vnizkd8=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		o6+kZmw3fjjO6lSFx9OVJpXvKeY=
+		NqpsSt/31QPD3REf+wQZjDzEkM4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -72,7 +68,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a9vLdX5BWB1HR5IYRXRBhoB4iNc=
+			Xsz8MerbV9wgIvmhJtP0vsffYY8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -81,7 +77,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RBzZy1oXd0+e41SfFUrpp5HpkHg=
+			yJuFkpHVkAxvTH7uKBTXEA7kW7M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -98,7 +94,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dZDr8A4EI3xqZNUtrewjydRvWqw=
+			XXWWMXd22W3SYIC3CtvVlAW0m40=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -106,18 +102,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dLxg+kf6SsBrxmQdpbl9imVg/3va0ndIj+YrLBOOriI=
-			</data>
-		</dict>
 		<key>Headers/BVPlayer-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DJhPdCTSnN/VXIe1syGihWDMc5RLUN+niivrjzsNyzg=
+			nBpyGRKhBisrYVmGoHyyXqBwZ8PJkAozlueo+CY6Wpk=
 			</data>
 		</dict>
 		<key>Headers/KKSPlayer.h</key>
@@ -131,70 +120,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZatNbBf0KwB+RSqZo0Y1Iv5BcgfacTUuYKkwezEXBao=
+			500I0Ch+WoIL5ywAlCmIH5qb+9GRjoHt7WrfSo2UiPs=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sqIraT5nbT9ft+aXCpZoBmey6cT/pWbwlLhN/RkFRJA=
+			Z5JP1kX5W9MAT+uOSmSwe00Rj8gajQLkNgiY8kDIN9Y=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GU+WoUmLbc7B705jy2shaJp10JJfXZXkaYZtqiqNnjg=
+			Zh2uskQ4WyT5mGCgwhI81L5+i5pSbtunrSXL485vKBc=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sqIraT5nbT9ft+aXCpZoBmey6cT/pWbwlLhN/RkFRJA=
+			Z5JP1kX5W9MAT+uOSmSwe00Rj8gajQLkNgiY8kDIN9Y=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lw9mzrItfK1m4wPVbJve5H5gYJBVvOPF3xHC9POt/cA=
+			2ECA06ncetW1JVPzuUEDW94tGR1elSnyYxAgP0OVTfk=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZatNbBf0KwB+RSqZo0Y1Iv5BcgfacTUuYKkwezEXBao=
+			500I0Ch+WoIL5ywAlCmIH5qb+9GRjoHt7WrfSo2UiPs=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3d8LzZilbYQ6tRZ5oEhimrDOZ30Lsuwe18etyL/g2iU=
+			j1h6m+zIurvuCZqevXGpWSoLwU4uNpcMq577fXv0RM0=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hcdowQvyJCKpV2afqvEWvsBKaUtAz45ovmS28naQnx8=
+			XDANCfDK2zOVnmMyu1tejiaJqg0OGMjUP+cCaFmgjqA=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3d8LzZilbYQ6tRZ5oEhimrDOZ30Lsuwe18etyL/g2iU=
+			j1h6m+zIurvuCZqevXGpWSoLwU4uNpcMq577fXv0RM0=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			71alsDaXVLjYL7ZlKdO3kbDLGNs8kSFil1rNPM7PJk4=
+			7VDXTBJNFdYtpu7O8/9AD4fQANep3sZEr9QbLylZGFw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -215,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cR9owkhTCCCgHv0qdm/m9P3Ns4lsQ0QaK2WKnzp8400=
+			On8o8Y4Vx6tHKrIIBA+mB66jwIp4WBIxBPelTFQ3nkU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -224,7 +213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			59vfdiLmvRYjSTvSCeMw9p421XaFxmCk2fD3K3UC8GI=
+			HICbVXcgJfV5SDk8XDFnMVp3bmgwg/UOEuFRTaQki+k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -247,7 +236,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			easKZasci/iFDnaqsDijVXkqU+Y3BxcvuN/MjXXzemI=
+			xhv/IVj+ObhdjzgedEX2xE+sWQQe4MVVHv7G0eaOMtU=
 			</data>
 			<key>optional</key>
 			<true/>

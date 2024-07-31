@@ -1,14 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BVPlayer
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BVPlayer
 import AVFoundation
 import AVKit
 import CoreMedia
 import DeveloperToolsSupport
 import Foundation
-import GoogleCast
-import MediaPlayer
 import Swift
 import SwiftUI
 import UIKit
@@ -34,7 +31,14 @@ public struct Resolution : Swift.Equatable {
   public static let SD: BVPlayer.Resolution
   public static func == (a: BVPlayer.Resolution, b: BVPlayer.Resolution) -> Swift.Bool
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UniSubtitleTrack : BVPlayer.UniTrack {
+public struct UniLiveTimeHelper {
+  public init(currentTime: Foundation.TimeInterval, offsetTime: Foundation.TimeInterval)
+  public init(currentTime: Foundation.TimeInterval, range: Swift.ClosedRange<Foundation.TimeInterval>)
+  public func calculatePercentagePosition() -> Swift.Float
+  public func calculateTimeShift() -> Foundation.TimeInterval
+}
+@objc @_inheritsConvenienceInitializers public class UniSubtitleTrack : BVPlayer.UniTrack {
+  override public init(label: Swift.String, identifier: Swift.String, isDefaultTrack: Swift.Bool, language: Swift.String? = nil)
   @objc deinit
 }
 public protocol UniSourceListener : ObjectiveC.NSObjectProtocol {
@@ -86,6 +90,15 @@ public struct MasterPlaylist {
   public var sourceConfig: BVPlayer.UniSourceConfig {
     get
   }
+  public var isActive: Swift.Bool {
+    get
+  }
+  public var isULLStream: Swift.Bool {
+    get
+  }
+  public var isThumbnailTrackAvailable: Swift.Bool {
+    get
+  }
   @objc deinit
   public func add(listener: any BVPlayer.UniSourceListener)
   public func remove(listener: any BVPlayer.UniSourceListener)
@@ -102,19 +115,6 @@ public struct LogData {
   public var eventContent: Swift.String
   public var eventTime: Swift.String
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class UniPlayerControlView : UIKit.UIView {
-  @objc deinit
-}
-public struct UniUISettingFactory {
-  public enum SettingGroup {
-    case quality, audio, subtitle, speed
-    public static func == (a: BVPlayer.UniUISettingFactory.SettingGroup, b: BVPlayer.UniUISettingFactory.SettingGroup) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-}
 @_hasMissingDesignatedInitializers public class UniBufferMediaTypeConfig {
   public var forwardDuration: Foundation.TimeInterval
   public var audioTimePitchAlgorithm: AVFoundation.AVAudioTimePitchAlgorithm
@@ -123,6 +123,10 @@ public struct UniUISettingFactory {
 @_hasMissingDesignatedInitializers public class UniBufferConfig {
   public var audioAndVideo: BVPlayer.UniBufferMediaTypeConfig
   @objc deinit
+}
+public struct UniSeekingBoundaryChecker {
+  public init(lowerBound: Swift.Double = 0.0, upperBound: Swift.Double)
+  public func getPoint(_ xPosition: Swift.Double, _ yPosition: Swift.Double) -> CoreFoundation.CGPoint
 }
 @objc final public class WidevineConfig : BVPlayer.UniDrmConfig {
   final public var licenseRequestHeaders: [Swift.String : Swift.String]
@@ -141,6 +145,8 @@ public enum VideoQualityCategory : Swift.Int {
 }
 @objc open class UniVideoQuality : ObjectiveC.NSObject, Swift.Comparable {
   public static func < (lhs: BVPlayer.UniVideoQuality, rhs: BVPlayer.UniVideoQuality) -> Swift.Bool
+  final public let identifier: Swift.String
+  final public let label: Swift.String
   final public let bitrate: Swift.UInt
   final public let width: Swift.UInt
   final public let height: Swift.UInt
@@ -162,22 +168,6 @@ extension Swift.String {
 public protocol DownloadContentManagerEventHandler : ObjectiveC.NSObjectProtocol {
   func add(listener: any BVPlayer.DownloadContentManagerListener)
   func remove(listener: any BVPlayer.DownloadContentManagerListener)
-}
-public struct PosterViewConfig {
-  public var title: Swift.String? {
-    get
-  }
-  public var description: Swift.String? {
-    get
-  }
-  public var posterSource: Foundation.URL? {
-    get
-  }
-  public var sharedUrl: Foundation.URL? {
-    get
-  }
-  public var sourceConfig: BVPlayer.UniSourceConfig
-  public init(source config: BVPlayer.UniSourceConfig)
 }
 public enum UniEventName : Swift.String {
   case unknown
@@ -382,11 +372,6 @@ public protocol UniFullscreenHandler : ObjectiveC.NSObjectProtocol {
   func onFullscreenRequested()
   func onFullscreenExitRequested()
 }
-@objc @_inheritsConvenienceInitializers final public class CastManagerOptions : ObjectiveC.NSObject {
-  final public var applicationId: Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
-}
 extension UIKit.UIImageView {
   @_Concurrency.MainActor(unsafe) public func setImage(with url: Foundation.URL?, completion: ((UIKit.UIImage?) -> Swift.Void)? = nil)
 }
@@ -445,6 +430,14 @@ public struct UniThumbnail {
   public let py: Swift.UInt
   public let width: Swift.UInt
   public let height: Swift.UInt
+  public var frame: CoreFoundation.CGRect {
+    get
+  }
+}
+public struct CastOptions {
+  public let images: [BVPlayer.CastImage]
+  public var customData: [Swift.String : Swift.String]
+  public init(images: [BVPlayer.CastImage], custom data: [Swift.String : Swift.String] = [:])
 }
 public struct DownloadConfig {
   public var minimumBitrate: Foundation.NSNumber?
@@ -484,13 +477,6 @@ public let pLog: BVPlayer.PLPrioritizingLogSystem
   public var pitches: [BVPlayer.PLLogPitch]
   @objc deinit
 }
-public struct PictureInPictureConfig {
-  public typealias RestoreUserInterfaceHandler = (_ completionHandler: @escaping (_ restored: Swift.Bool) -> Swift.Void) -> Swift.Void
-  public var isEnabled: Swift.Bool
-  @available(tvOS, unavailable)
-  public var showSkipControls: Swift.Bool
-  public var restoreUserInterfaceHandler: BVPlayer.PictureInPictureConfig.RestoreUserInterfaceHandler?
-}
 public enum WebVTTError : Swift.Error {
   case invalidSignature
   public static func == (a: BVPlayer.WebVTTError, b: BVPlayer.WebVTTError) -> Swift.Bool
@@ -504,31 +490,20 @@ public class WebVTTParser {
   public func parse() throws -> BVPlayer.WebVTT
   @objc deinit
 }
-public protocol UniSettingDetailViewControllerDelegate : ObjectiveC.NSObjectProtocol {
-  func controller(_ controller: BVPlayer.UniSettingDetailViewController, didSelectItem item: BVPlayer.UniUISettingItem)
-  func controllerDidPop(_ controller: BVPlayer.UniSettingDetailViewController)
-}
-@objc @_Concurrency.MainActor(unsafe) open class UniSettingDetailViewController : BVPlayer.UniUITableViewController {
-  @_Concurrency.MainActor(unsafe) final public let config: BVPlayer.UniUISettingConfig
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any BVPlayer.UniSettingDetailViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) public init(config: BVPlayer.UniUISettingConfig)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) open func popViewController()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @objc deinit
-}
 extension Foundation.Bundle {
   public var shortVersionString: Swift.String? {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers final public class UniThumbnailTrack : BVPlayer.UniTrack {
+@objc final public class UniThumbnailTrack : BVPlayer.UniTrack {
   public init(url: Foundation.URL, label: Swift.String, identifier: Swift.String, isDefaultTrack: Swift.Bool)
   @objc deinit
+}
+public struct CastImage {
+  public let url: Foundation.URL
+  public let width: Swift.Int
+  public let height: Swift.Int
+  public init(url: Foundation.URL, width: Swift.Int = 0, height: Swift.Int = 0)
 }
 public enum DownloadTrackAction : Swift.Int {
   case none
@@ -581,145 +556,9 @@ public enum DownloadTrackAction : Swift.Int {
 @objc @_hasMissingDesignatedInitializers public class OfflineSourceConfig : BVPlayer.UniSourceConfig {
   @objc deinit
 }
-public enum UniUIEventName : Swift.String {
-  case unknown
-  case settingPressed
-  case controlViewChanged
-  case infoPressed
-  case sharePressed
-  case pictureInPictureEnter
-  case pictureInPictureEntered
-  case pictureInPictureExit
-  case pictureInPictureExited
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public protocol UniUIEventProtocol {
-  var timestamp: Foundation.TimeInterval { get }
-  var name: BVPlayer.UniUIEventName { get }
-}
-@_hasMissingDesignatedInitializers public class UniUIEvent : BVPlayer.UniUIEventProtocol {
-  final public let timestamp: Foundation.TimeInterval
-  public var name: BVPlayer.UniUIEventName {
-    get
-  }
+@_hasMissingDesignatedInitializers public class MediaTrackHelper {
+  public static let offSubtitle: BVPlayer.UniSubtitleTrack
   @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UniSettingPressedEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class UniControlViewChangedEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UniInfoPressedEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class UniSharePressedEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  final public let sharedURL: Foundation.URL?
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PictureInPictureEnterEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PictureInPictureEnteredEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PictureInPictureExitEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PictureInPictureExitedEvent : BVPlayer.UniUIEvent {
-  override public var name: BVPlayer.UniUIEventName {
-    get
-  }
-  @objc deinit
-}
-public protocol UniUserInterfaceListener : ObjectiveC.NSObjectProtocol {
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSettingPressed event: BVPlayer.UniUIEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceiveControlViewChanged event: BVPlayer.UniControlViewChangedEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceiveInfoPressed event: BVPlayer.UniUIEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSharePressed event: BVPlayer.UniSharePressedEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureEnter event: BVPlayer.PictureInPictureEnterEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureEntered event: BVPlayer.PictureInPictureEnteredEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExit event: BVPlayer.PictureInPictureExitEvent)
-  func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExited event: BVPlayer.PictureInPictureExitedEvent)
-}
-extension BVPlayer.UniUserInterfaceListener {
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSettingPressed event: BVPlayer.UniUIEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveControlViewChanged event: BVPlayer.UniControlViewChangedEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveInfoPressed event: BVPlayer.UniUIEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSharePressed event: BVPlayer.UniSharePressedEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureEnter event: BVPlayer.PictureInPictureEnterEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureEntered event: BVPlayer.PictureInPictureEnteredEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExit event: BVPlayer.PictureInPictureExitEvent)
-  public func playerView(_ view: BVPlayer.UniPlayerView, didReceivePictureInPictureExited event: BVPlayer.PictureInPictureExitedEvent)
-}
-@objc @_Concurrency.MainActor(unsafe) open class UniPlayerView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var isPictureInPicture: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var isPictureInPictureAvailable: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var styleConfig: BVPlayer.UniStyleConfig
-  @_Concurrency.MainActor(unsafe) public var showsPlaybackControls: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var managesPlaybackControlsAutomatically: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public var posterViewConfig: BVPlayer.PosterViewConfig? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var player: BVPlayer.UniPlayer!
-  @_Concurrency.MainActor(unsafe) weak public var fullscreenHandler: (any BVPlayer.UniFullscreenHandler)?
-  @_Concurrency.MainActor(unsafe) public init(player: BVPlayer.UniPlayer, frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) convenience public init(player: BVPlayer.UniPlayer, frame: CoreFoundation.CGRect, playerViewConfig: BVPlayer.PlayerViewConfig)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-  @_Concurrency.MainActor(unsafe) public func enterFullscreen()
-  @_Concurrency.MainActor(unsafe) public func exitFullscreen()
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSourceLoadedEvent event: BVPlayer.UniSourceLoadedEvent)
-  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnReadyEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnVideoQualityChangedEvent event: BVPlayer.UniVideoPlaybackQualityChangedEvent)
-  @_Concurrency.MainActor(unsafe) open func player(_ player: BVPlayer.UniPlayer, didReceiveOnTimeChangedEvent event: BVPlayer.UniTimeChangedEvent)
-}
-extension BVPlayer.UniPlayerView {
-  @_Concurrency.MainActor(unsafe) public func add(listener: any BVPlayer.UniUserInterfaceListener)
-  @_Concurrency.MainActor(unsafe) public func remove(listener: any BVPlayer.UniUserInterfaceListener)
-}
-extension BVPlayer.UniPlayerView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-}
-extension BVPlayer.UniPlayerView : BVPlayer.UniSourceListener {
-  @_Concurrency.MainActor(unsafe) public func source(_ source: BVPlayer.UniSource, didReceiveSourceErrorEvent event: BVPlayer.UniSourceErrorEvent)
-}
-extension BVPlayer.UniPlayerView {
-  @_Concurrency.MainActor(unsafe) public func startPictureInPicture()
-  @_Concurrency.MainActor(unsafe) public func stopPictureInPicture()
 }
 @_hasMissingDesignatedInitializers public class PLLogPitch {
   final public let createdDate: Foundation.Date
@@ -734,10 +573,6 @@ extension BVPlayer.PLLogPitch : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
-}
-public struct PlayerViewConfig {
-  public var pictureInPictureConfig: BVPlayer.PictureInPictureConfig
-  public init()
 }
 @_hasMissingDesignatedInitializers public class UniSourceEvent : BVPlayer.UniEvent {
   final public let timestamp: Foundation.TimeInterval
@@ -770,21 +605,6 @@ public struct PlayerViewConfig {
     get
   }
   @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) open class UniSettingViewController : BVPlayer.UniUITableViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) public init(player: BVPlayer.UniPlayer)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) open func makeDetailViewController(with config: BVPlayer.UniUISettingConfig) -> BVPlayer.UniSettingDetailViewController
-  @objc deinit
-}
-extension BVPlayer.UniSettingViewController : BVPlayer.UniSettingDetailViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) public func controller(_ controller: BVPlayer.UniSettingDetailViewController, didSelectItem item: BVPlayer.UniUISettingItem)
-  @_Concurrency.MainActor(unsafe) public func controllerDidPop(_ controller: BVPlayer.UniSettingDetailViewController)
 }
 @_hasMissingDesignatedInitializers public class UniLogEvent {
   public var name: BVPlayer.UniLogEvent.EventName {
@@ -1046,7 +866,8 @@ extension BVPlayer.UniLogEvent {
     }
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UniAudioTrack : BVPlayer.UniTrack {
+@objc @_inheritsConvenienceInitializers public class UniAudioTrack : BVPlayer.UniTrack {
+  override public init(label: Swift.String, identifier: Swift.String, isDefaultTrack: Swift.Bool, language: Swift.String? = nil)
   @objc deinit
 }
 public enum UniPlayerErrorCode : Swift.Int {
@@ -1155,17 +976,12 @@ extension BVPlayer.UniPlayerListener {
   public func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveLoopChangedEvent event: BVPlayer.UniLoopChangedEvent)
 }
-public struct CastConstant {
-  public static var kReceiverAppID: Swift.String {
-    get
-  }
-}
 extension Swift.Optional {
   public var isNil: Swift.Bool {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers public class UniTrack : ObjectiveC.NSObject {
+@objc public class UniTrack : ObjectiveC.NSObject {
   public var url: Foundation.URL? {
     get
   }
@@ -1181,42 +997,13 @@ extension Swift.Optional {
   public var language: Swift.String? {
     get
   }
+  public init(label: Swift.String, identifier: Swift.String, isDefaultTrack: Swift.Bool, language: Swift.String? = nil)
   @objc deinit
 }
 @objc public class FairplayContentKeyRequest : ObjectiveC.NSObject {
   final public let skdUri: Swift.String
   public init(skdUri: Swift.String, contentKeyRequest: AVFoundation.AVContentKeyRequest)
   @objc deinit
-}
-public protocol UniPlayerViewControllerDelegate : ObjectiveC.NSObjectProtocol {
-  func playerViewController(_ controller: BVPlayer.UniPlayerViewController, didTapShareButtonWithURL url: Foundation.URL?)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UniPlayerViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public var player: BVPlayer.UniPlayer?
-  @_Concurrency.MainActor(unsafe) public var sourceConfig: BVPlayer.UniSourceConfig?
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any BVPlayer.UniPlayerViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) public var playerView: BVPlayer.UniPlayerView?
-  @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) open func makeView(with player: BVPlayer.UniPlayer, playerViewConfig: BVPlayer.PlayerViewConfig) -> BVPlayer.UniPlayerView
-  @_Concurrency.MainActor(unsafe) open func playerView(_ view: BVPlayer.UniPlayerView, didReceiveSettingPressed event: BVPlayer.UniUIEvent)
-  @_Concurrency.MainActor(unsafe) open func dismiss(completion: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-}
-extension BVPlayer.UniPlayerViewController {
-  @_Concurrency.MainActor(unsafe) public func load()
-}
-extension BVPlayer.UniPlayerViewController : BVPlayer.UniUserInterfaceListener {
-  @_Concurrency.MainActor(unsafe) public func playerView(_ view: BVPlayer.UniPlayerView, didReceiveControlViewChanged event: BVPlayer.UniControlViewChangedEvent)
-}
-extension BVPlayer.UniPlayerViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
-}
-extension BVPlayer.UniPlayerViewController : BVPlayer.CastManagerListener {
-  @_Concurrency.MainActor(unsafe) public func applicationRequestDidComplete(_ deviceName: Swift.String)
 }
 public protocol Event {
   var name: Swift.String { get }
@@ -1332,18 +1119,6 @@ public struct MediaPlaylist {
   }
   public static func parse(content: Swift.String) -> BVPlayer.MediaPlaylist?
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
-@_Concurrency.MainActor(unsafe) public class UniSheetPresentationController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) public init(rootViewController: UIKit.UIViewController, detents: [UIKit.UISheetPresentationController.Detent] = [.medium(), .large()])
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UniUITableViewController : UIKit.UITableViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableView.Style)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DownloadManager : ObjectiveC.NSObject {
   public static let shared: BVPlayer.DownloadManager
   #if compiler(>=5.3) && $AsyncAwait
@@ -1370,17 +1145,15 @@ public protocol UniLoggerListener : ObjectiveC.NSObjectProtocol {
   public func remove(listener: any BVPlayer.UniLoggerListener)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers open class UniUISettingItem {
-  final public let identifier: Swift.String
-  final public let group: BVPlayer.UniUISettingFactory.SettingGroup
-  final public let label: Swift.String
-  final public let rawValue: Swift.Float
-  public var category: BVPlayer.VideoQualityCategory
+@_hasMissingDesignatedInitializers public class UniUIStyleConfig {
+  public var trackTintColor: UIKit.UIColor
   @objc deinit
 }
-public struct UniUISettingConfig {
-  public let selectedIdentifier: Swift.String?
-  public let items: [BVPlayer.UniUISettingItem]
+final public class UniStyleConfig {
+  final public var scalingMode: AVFoundation.AVLayerVideoGravity
+  final public var uiStyleConfig: BVPlayer.UniUIStyleConfig
+  public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class UniPlayerFactory {
   public static func create() -> BVPlayer.UniPlayer
@@ -1420,18 +1193,12 @@ extension BVPlayer.UniPlayer : BVPlayer.UniSourceListener {
 @_hasMissingDesignatedInitializers final public class UniPlaylist {
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class UniUIStyleConfig {
-  public var trackTintColor: UIKit.UIColor
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers final public class UniStyleConfig {
-  final public var scalingMode: AVFoundation.AVLayerVideoGravity
-  final public var uiStyleConfig: BVPlayer.UniUIStyleConfig
-  @objc deinit
-}
 public struct UniCommonProperty {
 }
 @objc @_hasMissingDesignatedInitializers public class UniPlayer : ObjectiveC.NSObject {
+  public var config: BVPlayer.UniPlayerConfig {
+    get
+  }
   public var source: BVPlayer.UniSource? {
     get
   }
@@ -1471,6 +1238,9 @@ public struct UniCommonProperty {
   }
   public var currentTime: Foundation.TimeInterval
   public var duration: Foundation.TimeInterval {
+    get
+  }
+  public var dvrWindow: Swift.ClosedRange<Foundation.TimeInterval> {
     get
   }
   public var maxTimeShift: Foundation.TimeInterval {
@@ -1538,86 +1308,9 @@ public enum RemoteControlType : Swift.Int {
   public var usesExternalPlaybackWhileExternalScreenIsActive: Swift.Bool
   @objc deinit
 }
-extension BVPlayer.UniPlayerView : BVPlayer.UniPlayerListener {
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPlayingEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPausedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSubtitleChangedEvent event: BVPlayer.UniSubtitleChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSeekEvent event: BVPlayer.UniSeekEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSeekedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnStallStartedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnStallEndedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnPlaybackFinishedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnSourceLoadEvent event: BVPlayer.UniSourceLoadEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveOnAudioChangedEvent event: BVPlayer.UniAudioChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceivePlaybackSpeedChangedEvent event: BVPlayer.UniPlaybackSpeedChangedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadEvent event: BVPlayer.UniSourceUnloadEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadedEvent event: BVPlayer.UniSourceUnloadedEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceErrorEvent event: BVPlayer.UniSourceErrorEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveErrorEvent event: BVPlayer.UniPlayerErrorEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftedEvent event: any BVPlayer.UniEvent)
-  @_Concurrency.MainActor(unsafe) public func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
-}
-public protocol CastManagerListener : ObjectiveC.NSObjectProtocol {
-  func updatedMediaStatus(_ mediaStatus: GoogleCast.GCKMediaStatus?)
-  func updatedMediaMetadata(_ mediaMetadata: GoogleCast.GCKMediaMetadata)
-  func applicationWillConnect(_ deviceName: Swift.String)
-  func applicationConnected(_ deviceName: Swift.String)
-  func applicationDisconnected()
-  func applicationDidFailToStart(_ error: any Swift.Error)
-  func applicationRequestDidComplete(_ deviceName: Swift.String)
-}
-extension BVPlayer.CastManagerListener {
-  public func updatedMediaStatus(_ mediaStatus: GoogleCast.GCKMediaStatus?)
-  public func updatedMediaMetadata(_ mediaMetadata: GoogleCast.GCKMediaMetadata)
-  public func applicationWillConnect(_ deviceName: Swift.String)
-  public func applicationConnected(_ deviceName: Swift.String)
-  public func applicationDisconnected()
-  public func applicationDidFailToStart(_ error: any Swift.Error)
-  public func applicationRequestDidComplete(_ deviceName: Swift.String)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CastManager : ObjectiveC.NSObject {
-  public static let shared: BVPlayer.CastManager
-  public static func initializeCasting()
-  public static func initializeCasting(options: BVPlayer.CastManagerOptions)
-  public var isConnecting: Swift.Bool {
-    get
-  }
-  public var isConnected: Swift.Bool {
-    get
-  }
-  public var currentDevice: GoogleCast.GCKDevice?
-  public var currentMediaMetadata: GoogleCast.GCKMediaMetadata? {
-    get
-    set
-  }
-  public var currentMediaStatus: GoogleCast.GCKMediaStatus? {
-    get
-    set
-  }
-  public func add(listener: any BVPlayer.CastManagerListener)
-  public func remove(listener: any BVPlayer.CastManagerListener)
-  public func unload()
-  public func loadMedia(_ sourceConfig: BVPlayer.UniSourceConfig)
-  public func checkReceiverIsPlayingSameContent(_ sourceConfig: BVPlayer.UniSourceConfig) -> Swift.Bool
-  @objc deinit
-}
-extension BVPlayer.CastManager : GoogleCast.GCKSessionManagerListener {
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, didFailToStart session: GoogleCast.GCKCastSession, withError error: any Swift.Error)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, willStart session: GoogleCast.GCKCastSession)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, didStart session: GoogleCast.GCKCastSession)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, willResumeCastSession session: GoogleCast.GCKCastSession)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, didResumeCastSession session: GoogleCast.GCKCastSession)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, didEnd session: GoogleCast.GCKCastSession, withError error: (any Swift.Error)?)
-  @objc dynamic public func sessionManager(_ sessionManager: GoogleCast.GCKSessionManager, didSuspend session: GoogleCast.GCKCastSession, with reason: GoogleCast.GCKConnectionSuspendReason)
-}
-extension BVPlayer.CastManager : GoogleCast.GCKRemoteMediaClientListener {
-  @objc dynamic public func remoteMediaClient(_ client: GoogleCast.GCKRemoteMediaClient, didUpdate mediaStatus: GoogleCast.GCKMediaStatus?)
-  @objc dynamic public func remoteMediaClient(_ client: GoogleCast.GCKRemoteMediaClient, didUpdate mediaMetadata: GoogleCast.GCKMediaMetadata?)
-}
-extension BVPlayer.CastManager : GoogleCast.GCKRequestDelegate {
-  @objc dynamic public func requestDidComplete(_ request: GoogleCast.GCKRequest)
-  @objc dynamic public func request(_ request: GoogleCast.GCKRequest, didFailWithError error: GoogleCast.GCKError)
-  @objc dynamic public func request(_ request: GoogleCast.GCKRequest, didAbortWith abortReason: GoogleCast.GCKRequestAbortReason)
+public struct CastMediaTrack {
+  public var audioTrack: BVPlayer.UniAudioTrack?
+  public var subtitleTrack: BVPlayer.UniSubtitleTrack?
 }
 @objc @_hasMissingDesignatedInitializers public class DownloadContentManager : ObjectiveC.NSObject, BVPlayer.DownloadContentManagerEventHandler {
   public var downloadState: BVPlayer.DownloadState {
@@ -1654,6 +1347,7 @@ extension BVPlayer.UniPlayer {
   public func seek(to time: Foundation.TimeInterval)
   public func rewind(_ offset: Foundation.TimeInterval)
   public func forward(_ offset: Foundation.TimeInterval)
+  public func seekToLatestContent()
 }
 public enum UniSourceType : Swift.Int {
   case none
@@ -1674,14 +1368,6 @@ public enum UniFeature : Swift.String {
   public var rawValue: Swift.String {
     get
   }
-}
-public struct CastImage {
-  public init(url: Foundation.URL, width: Swift.Int = 0, height: Swift.Int = 0)
-}
-public struct CastOptions {
-  public let images: [BVPlayer.CastImage]
-  public var customData: [Swift.String : Swift.String]
-  public init(images: [BVPlayer.CastImage], custom data: [Swift.String : Swift.String] = [:])
 }
 @objc @_inheritsConvenienceInitializers public class PSEConfig : ObjectiveC.NSObject {
   public enum PSEModeType {
@@ -1709,14 +1395,16 @@ public struct CastOptions {
   public var sharedURL: Foundation.URL?
   public var features: [BVPlayer.UniFeature]
   public var castOptions: BVPlayer.CastOptions?
+  public var castMediaTrack: BVPlayer.CastMediaTrack
+  public var castCustomData: [Swift.String : Any] {
+    get
+  }
   public init(url: Foundation.URL, type: BVPlayer.UniSourceType = .hls)
   @objc deinit
 }
 extension BVPlayer.PLLogSeverity : Swift.Equatable {}
 extension BVPlayer.PLLogSeverity : Swift.Hashable {}
 extension BVPlayer.PLLogSeverity : Swift.RawRepresentable {}
-extension BVPlayer.UniUISettingFactory.SettingGroup : Swift.Equatable {}
-extension BVPlayer.UniUISettingFactory.SettingGroup : Swift.Hashable {}
 extension BVPlayer.VideoQualityCategory : Swift.Equatable {}
 extension BVPlayer.VideoQualityCategory : Swift.Hashable {}
 extension BVPlayer.VideoQualityCategory : Swift.RawRepresentable {}
@@ -1731,9 +1419,6 @@ extension BVPlayer.WebVTTError : Swift.Hashable {}
 extension BVPlayer.DownloadTrackAction : Swift.Equatable {}
 extension BVPlayer.DownloadTrackAction : Swift.Hashable {}
 extension BVPlayer.DownloadTrackAction : Swift.RawRepresentable {}
-extension BVPlayer.UniUIEventName : Swift.Equatable {}
-extension BVPlayer.UniUIEventName : Swift.Hashable {}
-extension BVPlayer.UniUIEventName : Swift.RawRepresentable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.Equatable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.Hashable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.RawRepresentable {}
