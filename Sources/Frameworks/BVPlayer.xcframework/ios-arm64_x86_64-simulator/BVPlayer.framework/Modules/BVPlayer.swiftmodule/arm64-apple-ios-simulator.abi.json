@@ -117,7 +117,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(config:)",
+            "printedName": "init(config:serviceConfig:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -144,11 +144,17 @@
                   }
                 ],
                 "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ServiceConfig",
+                "printedName": "BVPlayer.ServiceConfig",
+                "usr": "s:8BVPlayer13ServiceConfigC"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8BVPlayer9AnalyticsC6configACSDyS2SG_tcfc",
-            "mangledName": "$s8BVPlayer9AnalyticsC6configACSDyS2SG_tcfc",
+            "usr": "s:8BVPlayer9AnalyticsC6config13serviceConfigACSDyS2SG_AA07ServiceE0Ctcfc",
+            "mangledName": "$s8BVPlayer9AnalyticsC6config13serviceConfigACSDyS2SG_AA07ServiceE0Ctcfc",
             "moduleName": "BVPlayer",
             "declAttributes": [
               "AccessControl"
@@ -8401,6 +8407,43 @@
           },
           {
             "kind": "Var",
+            "name": "playerWarning",
+            "printedName": "playerWarning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.UniEventName.Type) -> BVPlayer.UniEventName",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.UniEventName.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UniEventName",
+                        "printedName": "BVPlayer.UniEventName",
+                        "usr": "s:8BVPlayer12UniEventNameO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer12UniEventNameO13playerWarningyA2CmF",
+            "mangledName": "$s8BVPlayer12UniEventNameO13playerWarningyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Var",
             "name": "timeShift",
             "printedName": "timeShift",
             "children": [
@@ -15057,6 +15100,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -15443,6 +15496,16 @@
         "moduleName": "BVPlayer",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -18118,6 +18181,319 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ServiceConfig",
+        "printedName": "ServiceConfig",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Version",
+            "printedName": "Version",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "v1",
+                "printedName": "v1",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BVPlayer.ServiceConfig.Version.Type) -> BVPlayer.ServiceConfig.Version",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Version",
+                        "printedName": "BVPlayer.ServiceConfig.Version",
+                        "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BVPlayer.ServiceConfig.Version.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Version",
+                            "printedName": "BVPlayer.ServiceConfig.Version",
+                            "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO2v1yA2EmF",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO2v1yA2EmF",
+                "moduleName": "BVPlayer"
+              },
+              {
+                "kind": "Var",
+                "name": "v2",
+                "printedName": "v2",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BVPlayer.ServiceConfig.Version.Type) -> BVPlayer.ServiceConfig.Version",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Version",
+                        "printedName": "BVPlayer.ServiceConfig.Version",
+                        "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BVPlayer.ServiceConfig.Version.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Version",
+                            "printedName": "BVPlayer.ServiceConfig.Version",
+                            "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO2v2yA2EmF",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO2v2yA2EmF",
+                "moduleName": "BVPlayer"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Version",
+                    "printedName": "BVPlayer.ServiceConfig.Version",
+                    "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Version",
+                    "printedName": "BVPlayer.ServiceConfig.Version",
+                    "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO2eeoiySbAE_AEtFZ",
+                "moduleName": "BVPlayer",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO9hashValueSivp",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO9hashValueSivp",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8BVPlayer13ServiceConfigC7VersionO9hashValueSivg",
+                    "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO9hashValueSivg",
+                    "moduleName": "BVPlayer",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO4hash4intoys6HasherVz_tF",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8BVPlayer13ServiceConfigC7VersionO",
+            "mangledName": "$s8BVPlayer13ServiceConfigC7VersionO",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Version",
+                "printedName": "BVPlayer.ServiceConfig.Version",
+                "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer13ServiceConfigC7versionAC7VersionOvp",
+            "mangledName": "$s8BVPlayer13ServiceConfigC7versionAC7VersionOvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Version",
+                    "printedName": "BVPlayer.ServiceConfig.Version",
+                    "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13ServiceConfigC7versionAC7VersionOvg",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7versionAC7VersionOvg",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Version",
+                    "printedName": "BVPlayer.ServiceConfig.Version",
+                    "usr": "s:8BVPlayer13ServiceConfigC7VersionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13ServiceConfigC7versionAC7VersionOvs",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7versionAC7VersionOvs",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13ServiceConfigC7versionAC7VersionOvM",
+                "mangledName": "$s8BVPlayer13ServiceConfigC7versionAC7VersionOvM",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer13ServiceConfigC",
+        "mangledName": "$s8BVPlayer13ServiceConfigC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "OfflineSourceConfig",
         "printedName": "OfflineSourceConfig",
         "children": [
@@ -19161,6 +19537,26 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "BVPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -24451,6 +24847,78 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "PlayerWarningEvent",
+        "printedName": "PlayerWarningEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UniEventName",
+                "printedName": "BVPlayer.UniEventName",
+                "usr": "s:8BVPlayer12UniEventNameO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer18PlayerWarningEventC4nameAA03UniD4NameOvp",
+            "mangledName": "$s8BVPlayer18PlayerWarningEventC4nameAA03UniD4NameOvp",
+            "moduleName": "BVPlayer",
+            "overriding": true,
+            "declAttributes": [
+              "AccessControl",
+              "Override"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer18PlayerWarningEventC4nameAA03UniD4NameOvg",
+                "mangledName": "$s8BVPlayer18PlayerWarningEventC4nameAA03UniD4NameOvg",
+                "moduleName": "BVPlayer",
+                "overriding": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer18PlayerWarningEventC",
+        "mangledName": "$s8BVPlayer18PlayerWarningEventC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:8BVPlayer14UniPlayerEventC",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "BVPlayer.UniPlayerEvent"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UniEvent",
+            "printedName": "UniEvent",
+            "usr": "s:8BVPlayer8UniEventP",
+            "mangledName": "$s8BVPlayer8UniEventP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -24573,6 +25041,16 @@
           "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -25424,6 +25902,42 @@
             "declKind": "Func",
             "usr": "s:8BVPlayer17UniPlayerListenerP6player_20didReceiveErrorEventyAA0bC0C_AA0bchI0CtF",
             "mangledName": "$s8BVPlayer17UniPlayerListenerP6player_20didReceiveErrorEventyAA0bC0C_AA0bchI0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
+            "printedName": "player(_:didReceiveWarningEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerWarningEvent",
+                "printedName": "BVPlayer.PlayerWarningEvent",
+                "usr": "s:8BVPlayer18PlayerWarningEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerP6player_22didReceiveWarningEventyAA0bC0C_AA0chI0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerP6player_22didReceiveWarningEventyAA0bC0C_AA0chI0CtF",
             "moduleName": "BVPlayer",
             "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
             "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
@@ -26374,6 +26888,41 @@
             "declKind": "Func",
             "usr": "s:8BVPlayer17UniPlayerListenerPAAE6player_20didReceiveErrorEventyAA0bC0C_AA0bchI0CtF",
             "mangledName": "$s8BVPlayer17UniPlayerListenerPAAE6player_20didReceiveErrorEventyAA0bC0C_AA0bchI0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
+            "printedName": "player(_:didReceiveWarningEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlayerWarningEvent",
+                "printedName": "BVPlayer.PlayerWarningEvent",
+                "usr": "s:8BVPlayer18PlayerWarningEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerPAAE6player_22didReceiveWarningEventyAA0bC0C_AA0chI0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerPAAE6player_22didReceiveWarningEventyAA0bC0C_AA0chI0CtF",
             "moduleName": "BVPlayer",
             "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
             "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
@@ -31149,10 +31698,12 @@
             "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvp",
             "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvp",
             "moduleName": "BVPlayer",
+            "deprecated": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -31230,6 +31781,207 @@
                 "declKind": "Accessor",
                 "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvM",
                 "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvM",
+                "moduleName": "BVPlayer",
+                "deprecated": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "licenseKey",
+            "printedName": "licenseKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer15UniPlayerConfigC10licenseKeySSSgvp",
+            "mangledName": "$s8BVPlayer15UniPlayerConfigC10licenseKeySSSgvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC10licenseKeySSSgvg",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC10licenseKeySSSgvg",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC10licenseKeySSSgvs",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC10licenseKeySSSgvs",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC10licenseKeySSSgvM",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC10licenseKeySSSgvM",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serviceConfig",
+            "printedName": "serviceConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ServiceConfig",
+                "printedName": "BVPlayer.ServiceConfig",
+                "usr": "s:8BVPlayer13ServiceConfigC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvp",
+            "mangledName": "$s8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ServiceConfig",
+                    "printedName": "BVPlayer.ServiceConfig",
+                    "usr": "s:8BVPlayer13ServiceConfigC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvg",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvg",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ServiceConfig",
+                    "printedName": "BVPlayer.ServiceConfig",
+                    "usr": "s:8BVPlayer13ServiceConfigC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvs",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0Cvs",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0CvM",
+                "mangledName": "$s8BVPlayer15UniPlayerConfigC07serviceD0AA07ServiceD0CvM",
                 "moduleName": "BVPlayer",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -39937,77 +40689,77 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1346,
+      "offset": 1369,
       "length": 19,
       "value": "\"BVPlayer.UniTimeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1587,
+      "offset": 1610,
       "length": 30,
       "value": "\"BVPlayer.UniLoadedTimeRangeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1900,
+      "offset": 1923,
       "length": 12,
       "value": "\"BVPlayer.UniSeekEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2756,
+      "offset": 2779,
       "length": 20,
       "value": "\"BVPlayer.UniAudioChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3129,
+      "offset": 3152,
       "length": 23,
       "value": "\"BVPlayer.UniSubtitleChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3545,
+      "offset": 3568,
       "length": 35,
       "value": "\"BVPlayer.UniVideoPlaybackQualityChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3972,
+      "offset": 3995,
       "length": 28,
       "value": "\"BVPlayer.UniPlaybackSpeedChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4246,
+      "offset": 4269,
       "length": 19,
       "value": "\"BVPlayer.UniSourceErrorEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4791,
+      "offset": 4814,
       "length": 26,
       "value": "\"BVPlayer.UniAudioVolumeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5004,
+      "offset": 5027,
       "length": 17,
       "value": "\"BVPlayer.UniTimeShiftEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5800,
+      "offset": 5823,
       "length": 19,
       "value": "\"BVPlayer.UniLoopChangedEvent\""
     },
@@ -40105,6 +40857,13 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
+      "offset": 387,
+      "length": 22,
+      "value": "\"streamingest-retouch\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
       "offset": 306,
       "length": 14,
       "value": "\"external-ull\""
@@ -40112,98 +40871,105 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 809,
+      "offset": 387,
+      "length": 22,
+      "value": "\"streamingest-retouch\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 902,
       "length": 15,
       "value": "\"license_token\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 849,
+      "offset": 942,
       "length": 20,
       "value": "\"available_features\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 1026,
       "length": 16,
       "value": "\"allow_playback\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 980,
+      "offset": 1073,
       "length": 9,
       "value": "\"buy_pse\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1020,
+      "offset": 1113,
       "length": 9,
       "value": "\"buy_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1066,
+      "offset": 1159,
       "length": 20,
       "value": "\"allow_external_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 809,
+      "offset": 902,
       "length": 15,
       "value": "\"license_token\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 849,
+      "offset": 942,
       "length": 20,
       "value": "\"available_features\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 1026,
       "length": 16,
       "value": "\"allow_playback\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 980,
+      "offset": 1073,
       "length": 9,
       "value": "\"buy_pse\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1020,
+      "offset": 1113,
       "length": 9,
       "value": "\"buy_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1066,
+      "offset": 1159,
       "length": 20,
       "value": "\"allow_external_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2759,
+      "offset": 2855,
       "length": 14,
       "value": "\"BVPlayer.LicenseRequest\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3345,
+      "offset": 3586,
       "length": 20,
       "value": "\"BVPlayer.ManifestCheckRequest\""
     },
@@ -40950,6 +41716,13 @@
       "value": "60.0"
     },
     {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsCachedLogHandler.swift",
+      "kind": "FloatLiteral",
+      "offset": 499,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Extensions\/Bundle.swift",
       "kind": "StringLiteral",
       "offset": 170,
@@ -41200,6 +41973,20 @@
       "offset": 443,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AtomicCache.swift",
+      "kind": "Array",
+      "offset": 339,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AtomicCache.swift",
+      "kind": "StringLiteral",
+      "offset": 387,
+      "length": 18,
+      "value": "\"AtomicCacheQueue\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Logs\/UniLogEvent.swift",
@@ -42273,6 +43060,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/FailLogTaskWatcher.swift",
+      "kind": "BooleanLiteral",
+      "offset": 343,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Source\/Track\/UniTrack.swift",
       "kind": "BooleanLiteral",
       "offset": 982,
@@ -42737,7 +43531,7 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 907,
+      "offset": 707,
       "length": 12,
       "value": "\"BVPlayer.FlagsRequest\""
     },

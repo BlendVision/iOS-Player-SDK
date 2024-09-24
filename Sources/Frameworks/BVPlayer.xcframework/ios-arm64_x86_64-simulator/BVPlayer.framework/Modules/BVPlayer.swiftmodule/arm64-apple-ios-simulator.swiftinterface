@@ -18,7 +18,7 @@ public protocol AnalyticsListener : ObjectiveC.NSObjectProtocol {
 @objc public class Analytics : ObjectiveC.NSObject {
   public func add(listener: any BVPlayer.AnalyticsListener)
   public func remove(listener: any BVPlayer.AnalyticsListener)
-  public init(config: [Swift.String : Swift.String])
+  public init(config: [Swift.String : Swift.String], serviceConfig: BVPlayer.ServiceConfig)
   @objc deinit
 }
 extension BVPlayer.Analytics : BVPlayer.UniLoggerListener {
@@ -194,6 +194,7 @@ public enum UniEventName : Swift.String {
   case unmuted
   case audioVolumeChanged
   case playerError
+  case playerWarning
   case timeShift
   case timeShifted
   case loopChanged
@@ -553,6 +554,19 @@ public enum DownloadTrackAction : Swift.Int {
   public var provideLicenseData: ((_ assetId: Swift.String) -> Foundation.Data?)?
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class ServiceConfig {
+  public enum Version {
+    case v1
+    case v2
+    public static func == (a: BVPlayer.ServiceConfig.Version, b: BVPlayer.ServiceConfig.Version) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var version: BVPlayer.ServiceConfig.Version
+  @objc deinit
+}
 @objc @_hasMissingDesignatedInitializers public class OfflineSourceConfig : BVPlayer.UniSourceConfig {
   @objc deinit
 }
@@ -901,6 +915,12 @@ public struct UniDeficiencyData {
   final public let data: BVPlayer.UniDeficiencyData?
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PlayerWarningEvent : BVPlayer.UniPlayerEvent {
+  override public var name: BVPlayer.UniEventName {
+    get
+  }
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers final public class UniAdaptationConfig {
   final public var maxSelectableBitrate: Swift.UInt
   @objc deinit
@@ -942,6 +962,7 @@ public protocol UniPlayerListener : ObjectiveC.NSObjectProtocol {
   func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadEvent event: BVPlayer.UniSourceUnloadEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadedEvent event: BVPlayer.UniSourceUnloadedEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveErrorEvent event: BVPlayer.UniPlayerErrorEvent)
+  func player(_ player: BVPlayer.UniPlayer, didReceiveWarningEvent event: BVPlayer.PlayerWarningEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftEvent event: BVPlayer.UniTimeShiftEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftedEvent event: any BVPlayer.UniEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
@@ -971,6 +992,7 @@ extension BVPlayer.UniPlayerListener {
   public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadEvent event: BVPlayer.UniSourceUnloadEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveSourceUnloadedEvent event: BVPlayer.UniSourceUnloadedEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveErrorEvent event: BVPlayer.UniPlayerErrorEvent)
+  public func player(_ player: BVPlayer.UniPlayer, didReceiveWarningEvent event: BVPlayer.PlayerWarningEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftEvent event: BVPlayer.UniTimeShiftEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftedEvent event: any BVPlayer.UniEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
@@ -1161,7 +1183,13 @@ final public class UniStyleConfig {
   @objc deinit
 }
 public class UniPlayerConfig {
-  public var key: Swift.String?
+  @available(*, deprecated, message: "The `key` property is deprecated. Use `licenseKey` instead.")
+  public var key: Swift.String? {
+    get
+    set
+  }
+  public var licenseKey: Swift.String?
+  public var serviceConfig: BVPlayer.ServiceConfig
   public var styleConfig: BVPlayer.UniStyleConfig {
     get
   }
@@ -1419,6 +1447,8 @@ extension BVPlayer.WebVTTError : Swift.Hashable {}
 extension BVPlayer.DownloadTrackAction : Swift.Equatable {}
 extension BVPlayer.DownloadTrackAction : Swift.Hashable {}
 extension BVPlayer.DownloadTrackAction : Swift.RawRepresentable {}
+extension BVPlayer.ServiceConfig.Version : Swift.Equatable {}
+extension BVPlayer.ServiceConfig.Version : Swift.Hashable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.Equatable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.Hashable {}
 extension BVPlayer.UniLogEvent.EventName : Swift.RawRepresentable {}

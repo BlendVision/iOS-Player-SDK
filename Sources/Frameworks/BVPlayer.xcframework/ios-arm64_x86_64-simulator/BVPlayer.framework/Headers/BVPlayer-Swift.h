@@ -330,6 +330,7 @@ SWIFT_CLASS("_TtC8BVPlayer9Analytics")
 
 
 
+
 SWIFT_CLASS("_TtC8BVPlayer13DownloadTrack")
 @interface DownloadTrack : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -842,6 +843,7 @@ SWIFT_CLASS("_TtC8BVPlayer9Analytics")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
