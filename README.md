@@ -55,7 +55,8 @@ When using Xcode, go to the `General` page or your app target and add the SDK bu
 ## Getting Started
 ### Configure the license key
 
-- You can set the license key via the `UniPlayerConfig.key` property when creating a `UniPlayer` instance.
+- You can set the license key via the `UniPlayerConfig.licenseKey` property when creating a `UniPlayer` instance.
+- If using version 2, set the service configuration as follows: `UniPlayerConfig.serviceConfig.version = .v2`
 
 ## Samples
 
