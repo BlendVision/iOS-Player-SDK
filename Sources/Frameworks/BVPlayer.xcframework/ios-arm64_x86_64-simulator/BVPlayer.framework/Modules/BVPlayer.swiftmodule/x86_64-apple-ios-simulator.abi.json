@@ -18161,6 +18161,164 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APIEnvironmentManager",
+        "printedName": "APIEnvironmentManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APIEnvironmentManager",
+                "printedName": "BVPlayer.APIEnvironmentManager",
+                "usr": "s:8BVPlayer21APIEnvironmentManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer21APIEnvironmentManagerC6sharedACvpZ",
+            "mangledName": "$s8BVPlayer21APIEnvironmentManagerC6sharedACvpZ",
+            "moduleName": "BVPlayer",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironmentManager",
+                    "printedName": "BVPlayer.APIEnvironmentManager",
+                    "usr": "s:8BVPlayer21APIEnvironmentManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer21APIEnvironmentManagerC6sharedACvgZ",
+                "mangledName": "$s8BVPlayer21APIEnvironmentManagerC6sharedACvgZ",
+                "moduleName": "BVPlayer",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentEnvironment",
+            "printedName": "currentEnvironment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APIEnvironment",
+                "printedName": "BVPlayer.APIEnvironment",
+                "usr": "s:8BVPlayer14APIEnvironmentO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer21APIEnvironmentManagerC18currentEnvironmentAA0B0Ovp",
+            "mangledName": "$s8BVPlayer21APIEnvironmentManagerC18currentEnvironmentAA0B0Ovp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironment",
+                    "printedName": "BVPlayer.APIEnvironment",
+                    "usr": "s:8BVPlayer14APIEnvironmentO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer21APIEnvironmentManagerC18currentEnvironmentAA0B0Ovg",
+                "mangledName": "$s8BVPlayer21APIEnvironmentManagerC18currentEnvironmentAA0B0Ovg",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setEnvironment",
+            "printedName": "setEnvironment(_:identifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIEnvironment",
+                "printedName": "BVPlayer.APIEnvironment",
+                "usr": "s:8BVPlayer14APIEnvironmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer21APIEnvironmentManagerC14setEnvironment_10identifierSbAA0B0O_SStF",
+            "mangledName": "$s8BVPlayer21APIEnvironmentManagerC14setEnvironment_10identifierSbAA0B0O_SStF",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer21APIEnvironmentManagerC",
+        "mangledName": "$s8BVPlayer21APIEnvironmentManagerC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -18599,16 +18757,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -19529,6 +19677,16 @@
             "usr": "s:8BVPlayer8UniEventP",
             "mangledName": "$s8BVPlayer8UniEventP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -27092,6 +27250,1008 @@
         "moduleName": "BVPlayer",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APIEnvironment",
+        "printedName": "APIEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dev",
+            "printedName": "dev",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.APIEnvironment.Type) -> BVPlayer.APIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironment",
+                    "printedName": "BVPlayer.APIEnvironment",
+                    "usr": "s:8BVPlayer14APIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.APIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIEnvironment",
+                        "printedName": "BVPlayer.APIEnvironment",
+                        "usr": "s:8BVPlayer14APIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer14APIEnvironmentO3devyA2CmF",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO3devyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "qa",
+            "printedName": "qa",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.APIEnvironment.Type) -> BVPlayer.APIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironment",
+                    "printedName": "BVPlayer.APIEnvironment",
+                    "usr": "s:8BVPlayer14APIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.APIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIEnvironment",
+                        "printedName": "BVPlayer.APIEnvironment",
+                        "usr": "s:8BVPlayer14APIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer14APIEnvironmentO2qayA2CmF",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO2qayA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "staging",
+            "printedName": "staging",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.APIEnvironment.Type) -> BVPlayer.APIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironment",
+                    "printedName": "BVPlayer.APIEnvironment",
+                    "usr": "s:8BVPlayer14APIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.APIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIEnvironment",
+                        "printedName": "BVPlayer.APIEnvironment",
+                        "usr": "s:8BVPlayer14APIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer14APIEnvironmentO7stagingyA2CmF",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO7stagingyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.APIEnvironment.Type) -> BVPlayer.APIEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIEnvironment",
+                    "printedName": "BVPlayer.APIEnvironment",
+                    "usr": "s:8BVPlayer14APIEnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.APIEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIEnvironment",
+                        "printedName": "BVPlayer.APIEnvironment",
+                        "usr": "s:8BVPlayer14APIEnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer14APIEnvironmentO10productionyA2CmF",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO10productionyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIEnvironment",
+                "printedName": "BVPlayer.APIEnvironment",
+                "usr": "s:8BVPlayer14APIEnvironmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIEnvironment",
+                "printedName": "BVPlayer.APIEnvironment",
+                "usr": "s:8BVPlayer14APIEnvironmentO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer14APIEnvironmentO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO2eeoiySbAC_ACtFZ",
+            "moduleName": "BVPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer14APIEnvironmentO9hashValueSivp",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO9hashValueSivp",
+            "moduleName": "BVPlayer",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer14APIEnvironmentO9hashValueSivg",
+                "mangledName": "$s8BVPlayer14APIEnvironmentO9hashValueSivg",
+                "moduleName": "BVPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer14APIEnvironmentO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s8BVPlayer14APIEnvironmentO4hash4intoys6HasherVz_tF",
+            "moduleName": "BVPlayer",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8BVPlayer14APIEnvironmentO",
+        "mangledName": "$s8BVPlayer14APIEnvironmentO",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EnvironmentURLStrategy",
+        "printedName": "EnvironmentURLStrategy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flagsBaseURL",
+            "printedName": "flagsBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP12flagsBaseURLSSvp",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP12flagsBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer22EnvironmentURLStrategyP12flagsBaseURLSSvg",
+                "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP12flagsBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.EnvironmentURLStrategy>",
+                "sugared_genericSig": "<Self where Self : BVPlayer.EnvironmentURLStrategy>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventBaseURL",
+            "printedName": "eventBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP12eventBaseURLSSvp",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP12eventBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer22EnvironmentURLStrategyP12eventBaseURLSSvg",
+                "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP12eventBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.EnvironmentURLStrategy>",
+                "sugared_genericSig": "<Self where Self : BVPlayer.EnvironmentURLStrategy>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heartbeatBaseURL",
+            "printedName": "heartbeatBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP16heartbeatBaseURLSSvp",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP16heartbeatBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer22EnvironmentURLStrategyP16heartbeatBaseURLSSvg",
+                "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP16heartbeatBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.EnvironmentURLStrategy>",
+                "sugared_genericSig": "<Self where Self : BVPlayer.EnvironmentURLStrategy>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8BVPlayer22EnvironmentURLStrategyP",
+        "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DevEnvironment",
+        "printedName": "DevEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flagsBaseURL",
+            "printedName": "flagsBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer14DevEnvironmentV12flagsBaseURLSSvp",
+            "mangledName": "$s8BVPlayer14DevEnvironmentV12flagsBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer14DevEnvironmentV12flagsBaseURLSSvg",
+                "mangledName": "$s8BVPlayer14DevEnvironmentV12flagsBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventBaseURL",
+            "printedName": "eventBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer14DevEnvironmentV12eventBaseURLSSvp",
+            "mangledName": "$s8BVPlayer14DevEnvironmentV12eventBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer14DevEnvironmentV12eventBaseURLSSvg",
+                "mangledName": "$s8BVPlayer14DevEnvironmentV12eventBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heartbeatBaseURL",
+            "printedName": "heartbeatBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer14DevEnvironmentV16heartbeatBaseURLSSvp",
+            "mangledName": "$s8BVPlayer14DevEnvironmentV16heartbeatBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer14DevEnvironmentV16heartbeatBaseURLSSvg",
+                "mangledName": "$s8BVPlayer14DevEnvironmentV16heartbeatBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8BVPlayer14DevEnvironmentV",
+        "mangledName": "$s8BVPlayer14DevEnvironmentV",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentURLStrategy",
+            "printedName": "EnvironmentURLStrategy",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QAEnvironment",
+        "printedName": "QAEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flagsBaseURL",
+            "printedName": "flagsBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer13QAEnvironmentV12flagsBaseURLSSvp",
+            "mangledName": "$s8BVPlayer13QAEnvironmentV12flagsBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13QAEnvironmentV12flagsBaseURLSSvg",
+                "mangledName": "$s8BVPlayer13QAEnvironmentV12flagsBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventBaseURL",
+            "printedName": "eventBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer13QAEnvironmentV12eventBaseURLSSvp",
+            "mangledName": "$s8BVPlayer13QAEnvironmentV12eventBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13QAEnvironmentV12eventBaseURLSSvg",
+                "mangledName": "$s8BVPlayer13QAEnvironmentV12eventBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heartbeatBaseURL",
+            "printedName": "heartbeatBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer13QAEnvironmentV16heartbeatBaseURLSSvp",
+            "mangledName": "$s8BVPlayer13QAEnvironmentV16heartbeatBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer13QAEnvironmentV16heartbeatBaseURLSSvg",
+                "mangledName": "$s8BVPlayer13QAEnvironmentV16heartbeatBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8BVPlayer13QAEnvironmentV",
+        "mangledName": "$s8BVPlayer13QAEnvironmentV",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentURLStrategy",
+            "printedName": "EnvironmentURLStrategy",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StagingEnvironment",
+        "printedName": "StagingEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flagsBaseURL",
+            "printedName": "flagsBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer18StagingEnvironmentV12flagsBaseURLSSvp",
+            "mangledName": "$s8BVPlayer18StagingEnvironmentV12flagsBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer18StagingEnvironmentV12flagsBaseURLSSvg",
+                "mangledName": "$s8BVPlayer18StagingEnvironmentV12flagsBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventBaseURL",
+            "printedName": "eventBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer18StagingEnvironmentV12eventBaseURLSSvp",
+            "mangledName": "$s8BVPlayer18StagingEnvironmentV12eventBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer18StagingEnvironmentV12eventBaseURLSSvg",
+                "mangledName": "$s8BVPlayer18StagingEnvironmentV12eventBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heartbeatBaseURL",
+            "printedName": "heartbeatBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer18StagingEnvironmentV16heartbeatBaseURLSSvp",
+            "mangledName": "$s8BVPlayer18StagingEnvironmentV16heartbeatBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer18StagingEnvironmentV16heartbeatBaseURLSSvg",
+                "mangledName": "$s8BVPlayer18StagingEnvironmentV16heartbeatBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8BVPlayer18StagingEnvironmentV",
+        "mangledName": "$s8BVPlayer18StagingEnvironmentV",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentURLStrategy",
+            "printedName": "EnvironmentURLStrategy",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProductionEnvironment",
+        "printedName": "ProductionEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flagsBaseURL",
+            "printedName": "flagsBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer21ProductionEnvironmentV12flagsBaseURLSSvp",
+            "mangledName": "$s8BVPlayer21ProductionEnvironmentV12flagsBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer21ProductionEnvironmentV12flagsBaseURLSSvg",
+                "mangledName": "$s8BVPlayer21ProductionEnvironmentV12flagsBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventBaseURL",
+            "printedName": "eventBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer21ProductionEnvironmentV12eventBaseURLSSvp",
+            "mangledName": "$s8BVPlayer21ProductionEnvironmentV12eventBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer21ProductionEnvironmentV12eventBaseURLSSvg",
+                "mangledName": "$s8BVPlayer21ProductionEnvironmentV12eventBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heartbeatBaseURL",
+            "printedName": "heartbeatBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer21ProductionEnvironmentV16heartbeatBaseURLSSvp",
+            "mangledName": "$s8BVPlayer21ProductionEnvironmentV16heartbeatBaseURLSSvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer21ProductionEnvironmentV16heartbeatBaseURLSSvg",
+                "mangledName": "$s8BVPlayer21ProductionEnvironmentV16heartbeatBaseURLSSvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8BVPlayer21ProductionEnvironmentV",
+        "mangledName": "$s8BVPlayer21ProductionEnvironmentV",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EnvironmentURLStrategy",
+            "printedName": "EnvironmentURLStrategy",
+            "usr": "s:8BVPlayer22EnvironmentURLStrategyP",
+            "mangledName": "$s8BVPlayer22EnvironmentURLStrategyP"
+          }
         ]
       },
       {
@@ -34692,6 +35852,16 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "BVPlayer"
       },
       {
@@ -41875,6 +43045,13 @@
       "offset": 633,
       "length": 17,
       "value": "\"BVPlayer.UniFairPlayConfig\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/Environment\/APIEnvironmentManager.swift",
+      "kind": "StringLiteral",
+      "offset": 501,
+      "length": 23,
+      "value": "\"io.kkcompany.bvplayer\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Offline\/Handler\/DownloadStorageHandler.swift",

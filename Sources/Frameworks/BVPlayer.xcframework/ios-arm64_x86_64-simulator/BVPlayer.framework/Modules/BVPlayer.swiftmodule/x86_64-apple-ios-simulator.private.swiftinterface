@@ -554,6 +554,14 @@ public enum DownloadTrackAction : Swift.Int {
   public var provideLicenseData: ((_ assetId: Swift.String) -> Foundation.Data?)?
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class APIEnvironmentManager {
+  public static let shared: BVPlayer.APIEnvironmentManager
+  public var currentEnvironment: BVPlayer.APIEnvironment {
+    get
+  }
+  public func setEnvironment(_ environment: BVPlayer.APIEnvironment, identifier: Swift.String) -> Swift.Bool
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class ServiceConfig {
   public enum Version {
     case v1
@@ -1000,6 +1008,66 @@ extension BVPlayer.UniPlayerListener {
 }
 extension Swift.Optional {
   public var isNil: Swift.Bool {
+    get
+  }
+}
+public enum APIEnvironment {
+  case dev
+  case qa
+  case staging
+  case production
+  public static func == (a: BVPlayer.APIEnvironment, b: BVPlayer.APIEnvironment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol EnvironmentURLStrategy {
+  var flagsBaseURL: Swift.String { get }
+  var eventBaseURL: Swift.String { get }
+  var heartbeatBaseURL: Swift.String { get }
+}
+public struct DevEnvironment : BVPlayer.EnvironmentURLStrategy {
+  public var flagsBaseURL: Swift.String {
+    get
+  }
+  public var eventBaseURL: Swift.String {
+    get
+  }
+  public var heartbeatBaseURL: Swift.String {
+    get
+  }
+}
+public struct QAEnvironment : BVPlayer.EnvironmentURLStrategy {
+  public var flagsBaseURL: Swift.String {
+    get
+  }
+  public var eventBaseURL: Swift.String {
+    get
+  }
+  public var heartbeatBaseURL: Swift.String {
+    get
+  }
+}
+public struct StagingEnvironment : BVPlayer.EnvironmentURLStrategy {
+  public var flagsBaseURL: Swift.String {
+    get
+  }
+  public var eventBaseURL: Swift.String {
+    get
+  }
+  public var heartbeatBaseURL: Swift.String {
+    get
+  }
+}
+public struct ProductionEnvironment : BVPlayer.EnvironmentURLStrategy {
+  public var flagsBaseURL: Swift.String {
+    get
+  }
+  public var eventBaseURL: Swift.String {
+    get
+  }
+  public var heartbeatBaseURL: Swift.String {
     get
   }
 }
@@ -1458,6 +1526,8 @@ extension BVPlayer.UniLogEvent.PropertyName : Swift.RawRepresentable {}
 extension BVPlayer.UniPlayerErrorCode : Swift.Equatable {}
 extension BVPlayer.UniPlayerErrorCode : Swift.Hashable {}
 extension BVPlayer.UniPlayerErrorCode : Swift.RawRepresentable {}
+extension BVPlayer.APIEnvironment : Swift.Equatable {}
+extension BVPlayer.APIEnvironment : Swift.Hashable {}
 extension BVPlayer.SourceErrorCode : Swift.Equatable {}
 extension BVPlayer.SourceErrorCode : Swift.Hashable {}
 extension BVPlayer.SourceErrorCode : Swift.RawRepresentable {}
