@@ -198,6 +198,8 @@ public enum UniEventName : Swift.String {
   case timeShift
   case timeShifted
   case loopChanged
+  case externalPlaybackActivated
+  case externalPlaybackInactivated
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -356,6 +358,18 @@ public protocol UniEvent {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class UniLoopChangedEvent : BVPlayer.UniPlayerEvent {
+  override public var name: BVPlayer.UniEventName {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ExternalPlaybackActiveEvent : BVPlayer.UniPlayerEvent {
+  override public var name: BVPlayer.UniEventName {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ExternalPlaybackInactiveEvent : BVPlayer.UniPlayerEvent {
   override public var name: BVPlayer.UniEventName {
     get
   }
@@ -532,6 +546,9 @@ public enum DownloadTrackAction : Swift.Int {
 @objc @_hasMissingDesignatedInitializers public class DownloadTrackSelection : ObjectiveC.NSObject {
   final public let textTracks: [BVPlayer.DownloadTextTrack]
   final public let audioTracks: [BVPlayer.DownloadAudioTrack]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MulticastDelegate<T> {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class UniTweaksConfig {
@@ -975,6 +992,8 @@ public protocol UniPlayerListener : ObjectiveC.NSObjectProtocol {
   func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftedEvent event: any BVPlayer.UniEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
   func player(_ player: BVPlayer.UniPlayer, didReceiveLoopChangedEvent event: BVPlayer.UniLoopChangedEvent)
+  func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackActivatedEvent event: BVPlayer.ExternalPlaybackActiveEvent)
+  func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackInactivatedEvent event: BVPlayer.ExternalPlaybackInactiveEvent)
 }
 extension BVPlayer.UniPlayerListener {
   public func player(_ player: BVPlayer.UniPlayer, didReceiveOnEvent event: any BVPlayer.UniEvent)
@@ -1005,6 +1024,8 @@ extension BVPlayer.UniPlayerListener {
   public func player(_ player: BVPlayer.UniPlayer, didReceiveTimeShiftedEvent event: any BVPlayer.UniEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveLoadedTimeChangedEvent event: BVPlayer.UniLoadedTimeRangeChangedEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveLoopChangedEvent event: BVPlayer.UniLoopChangedEvent)
+  public func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackActivatedEvent event: BVPlayer.ExternalPlaybackActiveEvent)
+  public func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackInactivatedEvent event: BVPlayer.ExternalPlaybackInactiveEvent)
 }
 extension Swift.Optional {
   public var isNil: Swift.Bool {
@@ -1304,6 +1325,9 @@ public struct UniCommonProperty {
   public var isPlaying: Swift.Bool
   public var isPaused: Swift.Bool
   public var isStalled: Swift.Bool {
+    get
+  }
+  public var isExternalPlaybackActive: Swift.Bool {
     get
   }
   public var availableVideoQualities: [BVPlayer.UniVideoQuality] {

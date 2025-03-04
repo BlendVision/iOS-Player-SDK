@@ -8554,6 +8554,80 @@
             "moduleName": "BVPlayer"
           },
           {
+            "kind": "Var",
+            "name": "externalPlaybackActivated",
+            "printedName": "externalPlaybackActivated",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.UniEventName.Type) -> BVPlayer.UniEventName",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.UniEventName.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UniEventName",
+                        "printedName": "BVPlayer.UniEventName",
+                        "usr": "s:8BVPlayer12UniEventNameO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer12UniEventNameO25externalPlaybackActivatedyA2CmF",
+            "mangledName": "$s8BVPlayer12UniEventNameO25externalPlaybackActivatedyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "externalPlaybackInactivated",
+            "printedName": "externalPlaybackInactivated",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.UniEventName.Type) -> BVPlayer.UniEventName",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.UniEventName.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UniEventName",
+                        "printedName": "BVPlayer.UniEventName",
+                        "usr": "s:8BVPlayer12UniEventNameO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer12UniEventNameO27externalPlaybackInactivatedyA2CmF",
+            "mangledName": "$s8BVPlayer12UniEventNameO27externalPlaybackInactivatedyA2CmF",
+            "moduleName": "BVPlayer"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -11330,6 +11404,150 @@
         ],
         "superclassUsr": "s:8BVPlayer14UniPlayerEventC",
         "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "BVPlayer.UniPlayerEvent"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UniEvent",
+            "printedName": "UniEvent",
+            "usr": "s:8BVPlayer8UniEventP",
+            "mangledName": "$s8BVPlayer8UniEventP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ExternalPlaybackActiveEvent",
+        "printedName": "ExternalPlaybackActiveEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UniEventName",
+                "printedName": "BVPlayer.UniEventName",
+                "usr": "s:8BVPlayer12UniEventNameO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer27ExternalPlaybackActiveEventC4nameAA03UniE4NameOvp",
+            "mangledName": "$s8BVPlayer27ExternalPlaybackActiveEventC4nameAA03UniE4NameOvp",
+            "moduleName": "BVPlayer",
+            "overriding": true,
+            "declAttributes": [
+              "AccessControl",
+              "Override"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer27ExternalPlaybackActiveEventC4nameAA03UniE4NameOvg",
+                "mangledName": "$s8BVPlayer27ExternalPlaybackActiveEventC4nameAA03UniE4NameOvg",
+                "moduleName": "BVPlayer",
+                "overriding": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer27ExternalPlaybackActiveEventC",
+        "mangledName": "$s8BVPlayer27ExternalPlaybackActiveEventC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:8BVPlayer14UniPlayerEventC",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "BVPlayer.UniPlayerEvent"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UniEvent",
+            "printedName": "UniEvent",
+            "usr": "s:8BVPlayer8UniEventP",
+            "mangledName": "$s8BVPlayer8UniEventP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ExternalPlaybackInactiveEvent",
+        "printedName": "ExternalPlaybackInactiveEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UniEventName",
+                "printedName": "BVPlayer.UniEventName",
+                "usr": "s:8BVPlayer12UniEventNameO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer29ExternalPlaybackInactiveEventC4nameAA03UniE4NameOvp",
+            "mangledName": "$s8BVPlayer29ExternalPlaybackInactiveEventC4nameAA03UniE4NameOvp",
+            "moduleName": "BVPlayer",
+            "overriding": true,
+            "declAttributes": [
+              "AccessControl",
+              "Override"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UniEventName",
+                    "printedName": "BVPlayer.UniEventName",
+                    "usr": "s:8BVPlayer12UniEventNameO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer29ExternalPlaybackInactiveEventC4nameAA03UniE4NameOvg",
+                "mangledName": "$s8BVPlayer29ExternalPlaybackInactiveEventC4nameAA03UniE4NameOvg",
+                "moduleName": "BVPlayer",
+                "overriding": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer29ExternalPlaybackInactiveEventC",
+        "mangledName": "$s8BVPlayer29ExternalPlaybackInactiveEventC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:8BVPlayer14UniPlayerEventC",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "BVPlayer.UniPlayerEvent"
         ],
@@ -15520,6 +15738,16 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -16479,6 +16707,31 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MulticastDelegate",
+        "printedName": "MulticastDelegate",
+        "declKind": "Class",
+        "usr": "s:8BVPlayer17MulticastDelegateC",
+        "mangledName": "$s8BVPlayer17MulticastDelegateC",
+        "moduleName": "BVPlayer",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<T>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
       },
       {
         "kind": "Import",
@@ -18639,6 +18892,16 @@
           "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -26253,6 +26516,78 @@
           {
             "kind": "Function",
             "name": "player",
+            "printedName": "player(_:didReceiveExternalPlaybackActivatedEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExternalPlaybackActiveEvent",
+                "printedName": "BVPlayer.ExternalPlaybackActiveEvent",
+                "usr": "s:8BVPlayer27ExternalPlaybackActiveEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerP6player_40didReceiveExternalPlaybackActivatedEventyAA0bC0C_AA0hi6ActiveK0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerP6player_40didReceiveExternalPlaybackActivatedEventyAA0bC0C_AA0hi6ActiveK0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
+            "printedName": "player(_:didReceiveExternalPlaybackInactivatedEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExternalPlaybackInactiveEvent",
+                "printedName": "BVPlayer.ExternalPlaybackInactiveEvent",
+                "usr": "s:8BVPlayer29ExternalPlaybackInactiveEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerP6player_42didReceiveExternalPlaybackInactivatedEventyAA0bC0C_AA0hi8InactiveK0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerP6player_42didReceiveExternalPlaybackInactivatedEventyAA0bC0C_AA0hi8InactiveK0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
             "printedName": "player(_:didReceiveOnEvent:)",
             "children": [
               {
@@ -27229,6 +27564,76 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
+            "printedName": "player(_:didReceiveExternalPlaybackActivatedEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExternalPlaybackActiveEvent",
+                "printedName": "BVPlayer.ExternalPlaybackActiveEvent",
+                "usr": "s:8BVPlayer27ExternalPlaybackActiveEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerPAAE6player_40didReceiveExternalPlaybackActivatedEventyAA0bC0C_AA0hi6ActiveK0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerPAAE6player_40didReceiveExternalPlaybackActivatedEventyAA0bC0C_AA0hi6ActiveK0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "player",
+            "printedName": "player(_:didReceiveExternalPlaybackInactivatedEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UniPlayer",
+                "printedName": "BVPlayer.UniPlayer",
+                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExternalPlaybackInactiveEvent",
+                "printedName": "BVPlayer.ExternalPlaybackInactiveEvent",
+                "usr": "s:8BVPlayer29ExternalPlaybackInactiveEventC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8BVPlayer17UniPlayerListenerPAAE6player_42didReceiveExternalPlaybackInactivatedEventyAA0bC0C_AA0hi8InactiveK0CtF",
+            "mangledName": "$s8BVPlayer17UniPlayerListenerPAAE6player_42didReceiveExternalPlaybackInactivatedEventyAA0bC0C_AA0hi8InactiveK0CtF",
+            "moduleName": "BVPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : BVPlayer.UniPlayerListener>",
+            "sugared_genericSig": "<Self where Self : BVPlayer.UniPlayerListener>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -27239,6 +27644,16 @@
         "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -33913,6 +34328,47 @@
           },
           {
             "kind": "Var",
+            "name": "isExternalPlaybackActive",
+            "printedName": "isExternalPlaybackActive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8BVPlayer9UniPlayerC24isExternalPlaybackActiveSbvp",
+            "mangledName": "$s8BVPlayer9UniPlayerC24isExternalPlaybackActiveSbvp",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8BVPlayer9UniPlayerC24isExternalPlaybackActiveSbvg",
+                "mangledName": "$s8BVPlayer9UniPlayerC24isExternalPlaybackActiveSbvg",
+                "moduleName": "BVPlayer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "availableVideoQualities",
             "printedName": "availableVideoQualities",
             "children": [
@@ -37536,6 +37992,16 @@
         "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "BVPlayer",
         "declAttributes": [
@@ -41579,6 +42045,13 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
+      "offset": 273,
+      "length": 19,
+      "value": "\"refresh_token_log\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
+      "kind": "StringLiteral",
       "offset": 183,
       "length": 14,
       "value": "\"playback_log\""
@@ -41593,56 +42066,63 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 306,
+      "offset": 273,
+      "length": 19,
+      "value": "\"refresh_token_log\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
+      "kind": "StringLiteral",
+      "offset": 375,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 344,
+      "offset": 413,
       "length": 12,
       "value": "\"event_name\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 385,
+      "offset": 454,
       "length": 15,
       "value": "\"event_content\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 495,
       "length": 12,
       "value": "\"event_time\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 306,
+      "offset": 375,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 344,
+      "offset": 413,
       "length": 12,
       "value": "\"event_name\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 385,
+      "offset": 454,
       "length": 15,
       "value": "\"event_content\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 495,
       "length": 12,
       "value": "\"event_time\""
     },
@@ -41859,77 +42339,77 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1369,
+      "offset": 1441,
       "length": 19,
       "value": "\"BVPlayer.UniTimeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1610,
+      "offset": 1682,
       "length": 30,
       "value": "\"BVPlayer.UniLoadedTimeRangeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1923,
+      "offset": 1995,
       "length": 12,
       "value": "\"BVPlayer.UniSeekEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2779,
+      "offset": 2851,
       "length": 20,
       "value": "\"BVPlayer.UniAudioChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3152,
+      "offset": 3224,
       "length": 23,
       "value": "\"BVPlayer.UniSubtitleChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3568,
+      "offset": 3640,
       "length": 35,
       "value": "\"BVPlayer.UniVideoPlaybackQualityChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3995,
+      "offset": 4067,
       "length": 28,
       "value": "\"BVPlayer.UniPlaybackSpeedChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4269,
+      "offset": 4341,
       "length": 19,
       "value": "\"BVPlayer.UniSourceErrorEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4814,
+      "offset": 4886,
       "length": 26,
       "value": "\"BVPlayer.UniAudioVolumeChangedEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5027,
+      "offset": 5099,
       "length": 17,
       "value": "\"BVPlayer.UniTimeShiftEvent\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/UniPlayerEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5823,
+      "offset": 5895,
       "length": 19,
       "value": "\"BVPlayer.UniLoopChangedEvent\""
     },
@@ -42048,98 +42528,126 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 902,
+      "offset": 984,
       "length": 15,
       "value": "\"license_token\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 942,
+      "offset": 1024,
       "length": 20,
       "value": "\"available_features\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1105,
+      "length": 18,
+      "value": "\"token_expired_at\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1152,
+      "length": 15,
+      "value": "\"refresh_token\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1231,
       "length": 16,
       "value": "\"allow_playback\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1073,
+      "offset": 1278,
       "length": 9,
       "value": "\"buy_pse\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1113,
+      "offset": 1318,
       "length": 9,
       "value": "\"buy_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1159,
+      "offset": 1364,
       "length": 20,
       "value": "\"allow_external_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 902,
+      "offset": 984,
       "length": 15,
       "value": "\"license_token\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 942,
+      "offset": 1024,
       "length": 20,
       "value": "\"available_features\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1105,
+      "length": 18,
+      "value": "\"token_expired_at\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1152,
+      "length": 15,
+      "value": "\"refresh_token\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1231,
       "length": 16,
       "value": "\"allow_playback\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1073,
+      "offset": 1278,
       "length": 9,
       "value": "\"buy_pse\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1113,
+      "offset": 1318,
       "length": 9,
       "value": "\"buy_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1159,
+      "offset": 1364,
       "length": 20,
       "value": "\"allow_external_ull\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2855,
+      "offset": 3350,
       "length": 14,
       "value": "\"BVPlayer.LicenseRequest\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3586,
+      "offset": 4089,
       "length": 20,
       "value": "\"BVPlayer.ManifestCheckRequest\""
     },
@@ -42977,6 +43485,13 @@
       "value": "\"BVPlayer.DownloadTrackSelection\""
     },
     {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Event\/MulticastDelegate.swift",
+      "kind": "Array",
+      "offset": 524,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Configs\/UniDrmConfig.swift",
       "kind": "StringLiteral",
       "offset": 823,
@@ -43094,6 +43609,13 @@
       "offset": 1381,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/ExternalPlaybackActiveObserver.swift",
+      "kind": "StringLiteral",
+      "offset": 134,
+      "length": 30,
+      "value": "\"BVPlayer.ExternalPlaybackActiveObserver\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Offline\/Core\/OfflineSourceConfig.swift",
@@ -44244,6 +44766,41 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseRefreshRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 15,
+      "value": "\"license_token\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseRefreshRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 18,
+      "value": "\"token_expired_at\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseRefreshRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 15,
+      "value": "\"license_token\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseRefreshRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 18,
+      "value": "\"token_expired_at\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseRefreshRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 945,
+      "length": 21,
+      "value": "\"BVPlayer.LicenseRefreshRequest\""
+    },
+    {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Source\/Track\/UniTrack.swift",
       "kind": "BooleanLiteral",
       "offset": 982,
@@ -44666,49 +45223,63 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 429,
+      "offset": 468,
       "length": 12,
       "value": "\"license.v1\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 467,
+      "offset": 506,
       "length": 12,
       "value": "\"license.v2\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 506,
+      "offset": 556,
+      "length": 20,
+      "value": "\"license.v2.refresh\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 603,
       "length": 13,
       "value": "\"manifest.v1\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 429,
+      "offset": 468,
       "length": 12,
       "value": "\"license.v1\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 467,
+      "offset": 506,
       "length": 12,
       "value": "\"license.v2\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 506,
+      "offset": 556,
+      "length": 20,
+      "value": "\"license.v2.refresh\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 603,
       "length": 13,
       "value": "\"manifest.v1\""
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
-      "offset": 707,
+      "offset": 804,
       "length": 12,
       "value": "\"BVPlayer.FlagsRequest\""
     },
@@ -45205,42 +45776,42 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1043,
+      "offset": 1137,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1161,
+      "offset": 1255,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 3507,
+      "offset": 3827,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 6454,
+      "offset": 6774,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 7083,
+      "offset": 7403,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
       "kind": "Dictionary",
-      "offset": 7305,
+      "offset": 7625,
       "length": 3,
       "value": "[]"
     },
@@ -45425,6 +45996,13 @@
       "offset": 384,
       "length": 22,
       "value": "\"BVPlayer.DownloadContentManager\""
+    },
+    {
+      "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LicenseTokenRefresher.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1698,
+      "length": 3,
+      "value": "300"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Configs\/UniSourceConfig.swift",
