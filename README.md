@@ -1,64 +1,68 @@
-# iOS-Player-SDK
+# iOS Player SDK
+
+The `BVPlayer` SDK enables seamless media playback on iOS. This guide helps you integrate the SDK into your project, configure it, and explore sample apps.
 
 - [Installation](#installation)
-    - [Swift Package Manager](#using-swift-package-manager)
-    - [Add the Player SDK to the Project directly](#add-the-player-sdk-to-the-project-directly)
-- [Getting Started](#getting-started)
-    - [Configure the license key](#configure-the-license-key)
+  - [Swift Package Manager](#using-swift-package-manager)
 - [Samples](#samples)
+- [Requirements](#requirements)
+- [Support](#support)
+
+---
 
 ## Installation
-To add the `BVPLAYER` SDK as a dependency to your project, you have two options: Swift Package Manager or adding the SDK bundle directly.
 
-### Dependency
-iOS Player SDK has a dependency on the GoogleCast framework version 4.7.1.04.11. This dependency enables integration with Google Cast for casting media content to Chromecast devices.
+The `BVPlayer` SDK can be integrated into your iOS project using **Swift Package Manager (SPM)**.
 
-### Using [Swift Package Manager](https://swift.org/package-manager/)
-[Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift frameworks. It integrates with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+### Using Swift Package Manager
+
+[Swift Package Manager (SPM)](https://swift.org/package-manager/) automates the process of downloading, compiling, and linking dependencies for Swift projects.
 
 #### Using Xcode
-To integrate using Xcode 13, open your Project file and specify it in `Project > Package Dependencies` using the following URL:
-
-```
-https://github.com/BlendVision/iOS-Player-SDK
-```
+1. Open your project in Xcode 13 or later.
+2. Navigate to `Project > Package Dependencies`.
+3. Click the `+` button and add the following URL:
+   ```
+   https://github.com/BlendVision/iOS-Player-SDK
+   ```
+4. Select the desired version (e.g., `3.0.0`) and add the package to your target.
 
 #### Using `Package.swift`
-To integrate using Apple's Swift Package Manager, add the following as a dependency to your `Package.swift` and replace `Version Number` with the desired version of the SDK.
-
-```swift
-.package(name: "BVPlayer", url: "https://github.com/BlendVision/bvplayer-ios", .exact("Version Number"))
-```
-
-And then specify the `BVPlayer` as a dependency of the desired target. Here is an example of a `Package.swift` file:
+Add the `BVPlayer` SDK as a dependency in your `Package.swift` file. Replace `Version Number` with the desired SDK version (e.g., `3.0.0`):
 
 ```swift
 let package = Package(
-  ...
-  dependencies: [
-    ...
-    .package(name: "BVPlayer", url: "https://github.com/BlendVision/bvplayer-ios", .exact("Version Number"))
-  ],
-  targets: [
-    .target(name: "<NAME_OF_YOUR_PACKAGE>", dependencies: ["BVPlayer"])
-  ]
-  ...
+    name: "YourPackageName",
+    dependencies: [
+        .package(name: "BVPlayer", url: "https://github.com/BlendVision/bvplayer-ios", .exact("Version Number"))
+    ],
+    targets: [
+        .target(name: "YourTargetName", dependencies: ["BVPlayer"])
+    ]
 )
 ```
 
-##### Limitation
-Executing `swift build` from the command line is currently not supported. Open the Package in Xcode if you are developing another Package depending on `BVPlayer`.
-
-### Add the Player SDK to the Project directly
-When using Xcode, go to the `General` page or your app target and add the SDK bundle (`BVPlayer.xcframework`) under `Linked Frameworks and Libraries`. The latest SDK for iOS can be downloaded [here](https://github.com/BlendVision/iOS-Player-SDK/releases/download/3.0.0/BVPlayer-3.0.0.7953271_Release.xcframework.zip).
-
-## Getting Started
-### Configure the license key
-
-- You can set the license key via the `UniPlayerConfig.licenseKey` property when creating a `UniPlayer` instance.
-- If using version 2, set the service configuration as follows: `UniPlayerConfig.serviceConfig.version = .v2`
+---
 
 ## Samples
 
-For samples using the BV Player iOS SDK see [here](https://github.com/BlendVision/iOS-Player-SDK).
-For a sample using the Swift Package Manager for integration, see sample named `BasicPlaybackSPM`.
+Explore sample projects to see the `BVPlayer` SDK in action:
+- **General Samples**: Check out the [iOS-Player-Samples repository](https://github.com/BlendVision/iOS-Player-Samples) for various examples.
+- **Swift Package Manager Sample**: The `BasicPlaybackSPM` sample demonstrates integration using SPM.
+
+---
+
+## Requirements
+
+- **iOS Version**: iOS 13.0 or later
+- **Xcode Version**: Xcode 13 or later
+
+---
+
+## Support
+
+For issues, questions, or contributions:
+- **GitHub Issues**: Report bugs or request features on the [GitHub Issues page](https://github.com/BlendVision/iOS-Player-SDK/issues).
+- **Documentation**: Refer to the [official documentation](https://developers.blendvision.com/_/sdk/player/ios/documentation/bvplayer) for detailed API references.
+- **Community**: Join the discussion on [GitHub Discussions](https://github.com/BlendVision/iOS-Player-SDK/discussions).
+```
