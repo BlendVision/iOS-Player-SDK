@@ -54,8 +54,8 @@ Explore sample projects to see the `BVPlayer` SDK in action:
 
 ## Requirements
 
-- **iOS Version**: iOS 13.0 or later
-- **Xcode Version**: Xcode 13 or later
+- **iOS Version**: iOS 14.0 or later
+- **Xcode Version**: Xcode 14 or later
 
 ---
 
