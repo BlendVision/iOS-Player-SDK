@@ -19,7 +19,7 @@ The `BVPlayer` SDK can be integrated into your iOS project using **Swift Package
 [Swift Package Manager (SPM)](https://swift.org/package-manager/) automates the process of downloading, compiling, and linking dependencies for Swift projects.
 
 #### Using Xcode
-1. Open your project in Xcode 13 or later.
+1. Open your project in Xcode 14 or later.
 2. Navigate to `Project > Package Dependencies`.
 3. Click the `+` button and add the following URL:
    ```
