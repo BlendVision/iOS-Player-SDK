@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BVPlayer-Swift.h</key>
 		<data>
-		EdBOoVbhr9VLeORhNGFBATQD5TM=
+		51BeeBDYMlvqC/pP2qqMnhwY36Q=
 		</data>
 		<key>Headers/KKSPlayer.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9D7qXoXjCKhfcKxFAFzRd86jq+M=
+		6G3Ib3veYUZCtH8ZaorxVJuu9v8=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ItT0oWTiqf+7psn//rt6cLrCzkk=
+		1J7mt0swJHueDNZ5ZvvP4spOLTE=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		G+/+HuYKB/1mnzB+BbHMRpDJmas=
+		qIShsblYMnx46XYQU/friKUUUgI=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		8MHvehIuJ6UreucmcYoKmKZBN8Y=
+		6HvfEWJJmPqv4/fUfNdFVpN/7Y4=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		G+/+HuYKB/1mnzB+BbHMRpDJmas=
+		qIShsblYMnx46XYQU/friKUUUgI=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		QEgLN/nWVA0BtarWC0/vp3pDJmQ=
+		j2cj6O0X1B02jLC7t4wCCCHraJU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MnnCWmAvxIbqcY+KLsAxum/cPjAFGHTq/zNummvgScU=
+			bQFzeHce4zqsNd/xJvUT0YFJ3ZpvO5ds6qmt2XwTKlE=
 			</data>
 		</dict>
 		<key>Headers/KKSPlayer.h</key>
@@ -100,35 +100,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qLRCEN9lv1lHeZxbZI/jL48z5YNCd6SXaHKZePDawjs=
+			yytHpz/rr4wXsZAFMjfiUdTSsc2bjmcC4pkIFZqFrXU=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KfaVKVptOBTqr3K1QOi0s9HAIxr83pxWVgLabHsiV/Y=
+			fohSoDUL9a/wwhYorfxcQ25nJGBnbHMnuFf7POFQdUM=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vII9Oy4+KndywB75lfR4w8Zre7X4DXbUq4fkNOFffvM=
+			ECQeLVqzZYcz7EFjzflHIoQZt2lyaytXKXedJiI0ANE=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KfaVKVptOBTqr3K1QOi0s9HAIxr83pxWVgLabHsiV/Y=
+			fohSoDUL9a/wwhYorfxcQ25nJGBnbHMnuFf7POFQdUM=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xDhyGWy4n6JiZzpfI4Eka2bDhIbv4+ldO/UPDxUfpjM=
+			imm6h2jEf+ksy1iWPyL1SSo1BAQsRPY8UKS/Clvc20Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,13 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BVPlayer
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AVKit
 import CoreMedia
-import DeveloperToolsSupport
 import Foundation
 import Swift
-import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -15,10 +14,9 @@ import _SwiftConcurrencyShims
 public protocol AnalyticsListener : ObjectiveC.NSObjectProtocol {
   func logData(_ data: BVPlayer.LogData)
 }
-@objc public class Analytics : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class Analytics : ObjectiveC.NSObject {
   public func add(listener: any BVPlayer.AnalyticsListener)
   public func remove(listener: any BVPlayer.AnalyticsListener)
-  public init(config: [Swift.String : Swift.String], serviceConfig: BVPlayer.ServiceConfig)
   @objc deinit
 }
 extension BVPlayer.Analytics : BVPlayer.UniLoggerListener {
@@ -55,7 +53,7 @@ public enum PLLogSeverity : Swift.Int, Swift.CustomStringConvertible, Swift.Case
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [BVPlayer.PLLogSeverity]
   public typealias RawValue = Swift.Int
-  public static var allCases: [BVPlayer.PLLogSeverity] {
+  nonisolated public static var allCases: [BVPlayer.PLLogSeverity] {
     get
   }
   public var rawValue: Swift.Int {
@@ -388,7 +386,7 @@ public protocol UniFullscreenHandler : ObjectiveC.NSObjectProtocol {
   func onFullscreenExitRequested()
 }
 extension UIKit.UIImageView {
-  @_Concurrency.MainActor(unsafe) public func setImage(with url: Foundation.URL?, completion: ((UIKit.UIImage?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func setImage(with url: Foundation.URL?, completion: ((UIKit.UIImage?) -> Swift.Void)? = nil)
 }
 public struct WebVTT {
   public let cues: [BVPlayer.WebVTT.Cue]
@@ -557,18 +555,6 @@ public enum DownloadTrackAction : Swift.Int {
 @objc @_inheritsConvenienceInitializers public class UniDrmConfig : ObjectiveC.NSObject {
   public var licenseUrl: Foundation.URL?
   @objc override dynamic public init()
-  @objc deinit
-}
-@objc public class UniFairPlayConfig : BVPlayer.UniDrmConfig {
-  public var certificateUrl: Foundation.URL?
-  public var licenseRequestHeaders: [Swift.String : Swift.String]?
-  public var certificateRequestHeaders: [Swift.String : Swift.String]?
-  public init(licenseUrl: Foundation.URL?, certificateUrl: Foundation.URL)
-  public var prepareMessage: ((_ spcData: Foundation.Data, _ assetID: Swift.String) -> Foundation.Data?)?
-  public var prepareCertificate: ((_ certificate: Foundation.Data) -> Foundation.Data)?
-  public var prepareLicense: ((_ ckc: Foundation.Data) -> Foundation.Data)?
-  public var persistLicenseData: ((_ assetId: Swift.String, _ licenseData: Foundation.Data) -> Swift.Void)?
-  public var provideLicenseData: ((_ assetId: Swift.String) -> Foundation.Data?)?
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class APIEnvironmentManager {
@@ -898,6 +884,7 @@ extension BVPlayer.UniLogEvent {
     case deviceCategory
     case devicePlatform
     case seekTo
+    case playbackPlayerActive
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1027,11 +1014,19 @@ extension BVPlayer.UniPlayerListener {
   public func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackActivatedEvent event: BVPlayer.ExternalPlaybackActiveEvent)
   public func player(_ player: BVPlayer.UniPlayer, didReceiveExternalPlaybackInactivatedEvent event: BVPlayer.ExternalPlaybackInactiveEvent)
 }
+#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional {
   public var isNil: Swift.Bool {
     get
   }
 }
+#else
+extension Swift.Optional {
+  public var isNil: Swift.Bool {
+    get
+  }
+}
+#endif
 public enum APIEnvironment {
   case dev
   case qa
@@ -1232,15 +1227,9 @@ public struct MediaPlaylist {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DownloadManager : ObjectiveC.NSObject {
   public static let shared: BVPlayer.DownloadManager
-  #if compiler(>=5.3) && $AsyncAwait
   public func downloadContentManager(for sourceConfig: BVPlayer.UniSourceConfig) async throws -> BVPlayer.DownloadContentManager
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func downloadContentManager(for sourceConfig: BVPlayer.UniSourceConfig, identifier: Swift.String) async throws -> BVPlayer.DownloadContentManager
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func downloadState(for sourceConfig: BVPlayer.UniSourceConfig) async throws -> BVPlayer.DownloadState
-  #endif
   @objc deinit
 }
 public protocol UniLoggerListener : ObjectiveC.NSObjectProtocol {
@@ -1386,7 +1375,9 @@ public struct UniCommonProperty {
     get
     set
   }
-  public var analytics: BVPlayer.Analytics
+  public var analytics: BVPlayer.Analytics? {
+    get
+  }
   @objc deinit
   public func destroy()
   public func add(listener: any BVPlayer.UniPlayerListener)
@@ -1401,6 +1392,9 @@ extension BVPlayer.UniPlayer : AVFoundation.AVAssetResourceLoaderDelegate {
 extension BVPlayer.UniPlayer {
   public func setAudio(track identifier: Swift.String)
   public func setSubtitle(track identifier: Swift.String?)
+}
+extension BVPlayer.UniPlayer {
+  public func analytics(_ analytics: BVPlayer.Analytics, didRequestCurrentPosition completion: @escaping (Foundation.TimeInterval) -> Swift.Void)
 }
 public enum AnalyticsField : Swift.String {
   case token
@@ -1447,15 +1441,9 @@ extension BVPlayer.DownloadContentManager {
   public func suspendDownload()
   public func resumeDownload()
   public func cancelDownload()
-  #if compiler(>=5.3) && $AsyncAwait
   public func deleteOfflineData() async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func renewOfflineLicense() async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func fetchAvailableTracks() async throws -> BVPlayer.DownloadTrackSelection?
-  #endif
   public func fetchVideoQualities() -> [BVPlayer.UniVideoQuality]
 }
 extension BVPlayer.DownloadContentManager : BVPlayer.UniSourceListener {
@@ -1468,6 +1456,18 @@ extension BVPlayer.UniPlayer {
   public func rewind(_ offset: Foundation.TimeInterval)
   public func forward(_ offset: Foundation.TimeInterval)
   public func seekToLatestContent()
+}
+@objc public class UniFairPlayConfig : BVPlayer.UniDrmConfig {
+  public var certificateUrl: Foundation.URL?
+  public var licenseRequestHeaders: [Swift.String : Swift.String]?
+  public var certificateRequestHeaders: [Swift.String : Swift.String]?
+  public init(licenseUrl: Foundation.URL?, certificateUrl: Foundation.URL)
+  public var prepareMessage: ((_ spcData: Foundation.Data, _ assetID: Swift.String) -> Foundation.Data?)?
+  public var prepareCertificate: ((_ certificate: Foundation.Data) -> Foundation.Data)?
+  public var prepareLicense: ((_ ckc: Foundation.Data) -> Foundation.Data)?
+  public var persistLicenseData: ((_ assetId: Swift.String, _ licenseData: Foundation.Data) -> Swift.Void)?
+  public var provideLicenseData: ((_ assetId: Swift.String) -> Foundation.Data?)?
+  @objc deinit
 }
 public enum UniSourceType : Swift.Int {
   case none
