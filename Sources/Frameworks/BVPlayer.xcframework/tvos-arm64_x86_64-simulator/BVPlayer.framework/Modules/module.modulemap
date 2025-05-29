@@ -1,0 +1,4 @@
+framework module BVPlayer {
+  header "BVPlayer-Swift.h"
+  requires objc
+}

@@ -45,21 +45,6 @@ public protocol UniSourceListener : ObjectiveC.NSObjectProtocol {
 extension BVPlayer.UniSourceListener {
   public func source(_ source: BVPlayer.UniSource, didReceiveSourceErrorEvent event: BVPlayer.UniSourceErrorEvent)
 }
-public enum PLLogSeverity : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable {
-  case verbose, debug, info, warning, error
-  public var description: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [BVPlayer.PLLogSeverity]
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [BVPlayer.PLLogSeverity] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @_hasMissingDesignatedInitializers public class SubtitleHandler {
   public func subtitle(forTime time: Foundation.TimeInterval) -> Swift.String?
   @objc deinit
@@ -484,12 +469,6 @@ extension BVPlayer.DownloadContentManagerListener {
   public func onAvailableTracksDownloaded(_ event: any BVPlayer.AvailableTracksDownloadedEvent, manager: BVPlayer.DownloadContentManager)
   public func onDownloadedContentRenewed(_ event: any BVPlayer.DownloadedContentRenewedEvent, manager: BVPlayer.DownloadContentManager)
 }
-public let pLog: BVPlayer.PLPrioritizingLogSystem
-@_hasMissingDesignatedInitializers public class PLPrioritizingLogSystem {
-  public func setEnabled(_ isEnabled: Swift.Bool)
-  public var pitches: [BVPlayer.PLLogPitch]
-  @objc deinit
-}
 public enum WebVTTError : Swift.Error {
   case invalidSignature
   public static func == (a: BVPlayer.WebVTTError, b: BVPlayer.WebVTTError) -> Swift.Bool
@@ -585,20 +564,6 @@ public enum DownloadTrackAction : Swift.Int {
   public static let offSubtitle: BVPlayer.UniSubtitleTrack
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class PLLogPitch {
-  final public let createdDate: Foundation.Date
-  final public let logSeverity: Swift.Int
-  final public let file: Swift.String
-  final public let line: Swift.Int
-  final public let method: Swift.String
-  final public let message: Swift.String
-  @objc deinit
-}
-extension BVPlayer.PLLogPitch : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
-}
 @_hasMissingDesignatedInitializers public class UniSourceEvent : BVPlayer.UniEvent {
   final public let timestamp: Foundation.TimeInterval
   public var name: BVPlayer.UniEventName {
@@ -630,6 +595,17 @@ extension BVPlayer.PLLogPitch : Swift.CustomStringConvertible {
     get
   }
   @objc deinit
+}
+public enum AnalyticsPlayerConfig {
+  case disabled
+  case enabled(analyticsConfig: BVPlayer.AnalyticsConfig = AnalyticsConfig(), defaultMetadata: BVPlayer.DefaultMetadata = DefaultMetadata())
+}
+public class AnalyticsConfig {
+  public init(token: Swift.String? = nil)
+  @objc deinit
+}
+public struct DefaultMetadata {
+  public init(moduleConfig: [Swift.String : Swift.String] = [:])
 }
 @_hasMissingDesignatedInitializers public class UniLogEvent {
   public var name: BVPlayer.UniLogEvent.EventName {
@@ -1256,16 +1232,13 @@ final public class UniStyleConfig {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class UniPlayerFactory {
-  public static func create() -> BVPlayer.UniPlayer
-  public static func create(player config: BVPlayer.UniPlayerConfig, moduleConfig: [Swift.String : Swift.String] = [:]) -> BVPlayer.UniPlayer
+  public static func createPlayer(playerConfig config: BVPlayer.UniPlayerConfig, analytics: BVPlayer.AnalyticsPlayerConfig = .enabled(
+            analyticsConfig: AnalyticsConfig(),
+            defaultMetadata: DefaultMetadata()
+        )) -> BVPlayer.UniPlayer
   @objc deinit
 }
 public class UniPlayerConfig {
-  @available(*, deprecated, message: "The `key` property is deprecated. Use `licenseKey` instead.")
-  public var key: Swift.String? {
-    get
-    set
-  }
   public var licenseKey: Swift.String?
   public var serviceConfig: BVPlayer.ServiceConfig
   public var styleConfig: BVPlayer.UniStyleConfig {
@@ -1397,7 +1370,6 @@ extension BVPlayer.UniPlayer {
   public func analytics(_ analytics: BVPlayer.Analytics, didRequestCurrentPosition completion: @escaping (Foundation.TimeInterval) -> Swift.Void)
 }
 public enum AnalyticsField : Swift.String {
-  case token
   case sessionId
   case resourceId
   case userId
@@ -1522,9 +1494,6 @@ public enum UniFeature : Swift.String {
   public init(url: Foundation.URL, type: BVPlayer.UniSourceType = .hls)
   @objc deinit
 }
-extension BVPlayer.PLLogSeverity : Swift.Equatable {}
-extension BVPlayer.PLLogSeverity : Swift.Hashable {}
-extension BVPlayer.PLLogSeverity : Swift.RawRepresentable {}
 extension BVPlayer.VideoQualityCategory : Swift.Equatable {}
 extension BVPlayer.VideoQualityCategory : Swift.Hashable {}
 extension BVPlayer.VideoQualityCategory : Swift.RawRepresentable {}

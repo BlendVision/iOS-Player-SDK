@@ -1083,477 +1083,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "PLLogSeverity",
-        "printedName": "PLLogSeverity",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "verbose",
-            "printedName": "verbose",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.PLLogSeverity.Type) -> BVPlayer.PLLogSeverity",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.PLLogSeverity.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer13PLLogSeverityO7verboseyA2CmF",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO7verboseyA2CmF",
-            "moduleName": "BVPlayer"
-          },
-          {
-            "kind": "Var",
-            "name": "debug",
-            "printedName": "debug",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.PLLogSeverity.Type) -> BVPlayer.PLLogSeverity",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.PLLogSeverity.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer13PLLogSeverityO5debugyA2CmF",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO5debugyA2CmF",
-            "moduleName": "BVPlayer"
-          },
-          {
-            "kind": "Var",
-            "name": "info",
-            "printedName": "info",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.PLLogSeverity.Type) -> BVPlayer.PLLogSeverity",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.PLLogSeverity.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer13PLLogSeverityO4infoyA2CmF",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO4infoyA2CmF",
-            "moduleName": "BVPlayer"
-          },
-          {
-            "kind": "Var",
-            "name": "warning",
-            "printedName": "warning",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.PLLogSeverity.Type) -> BVPlayer.PLLogSeverity",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.PLLogSeverity.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer13PLLogSeverityO7warningyA2CmF",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO7warningyA2CmF",
-            "moduleName": "BVPlayer"
-          },
-          {
-            "kind": "Var",
-            "name": "error",
-            "printedName": "error",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.PLLogSeverity.Type) -> BVPlayer.PLLogSeverity",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.PLLogSeverity.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer13PLLogSeverityO5erroryA2CmF",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO5erroryA2CmF",
-            "moduleName": "BVPlayer"
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer13PLLogSeverityO11descriptionSSvp",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO11descriptionSSvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer13PLLogSeverityO11descriptionSSvg",
-                "mangledName": "$s8BVPlayer13PLLogSeverityO11descriptionSSvg",
-                "moduleName": "BVPlayer",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BVPlayer.PLLogSeverity?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8BVPlayer13PLLogSeverityO8rawValueACSgSi_tcfc",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO8rawValueACSgSi_tcfc",
-            "moduleName": "BVPlayer",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer13PLLogSeverityO8rawValueSivp",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO8rawValueSivp",
-            "moduleName": "BVPlayer",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer13PLLogSeverityO8rawValueSivg",
-                "mangledName": "$s8BVPlayer13PLLogSeverityO8rawValueSivg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "allCases",
-            "printedName": "allCases",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[BVPlayer.PLLogSeverity]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogSeverity",
-                    "printedName": "BVPlayer.PLLogSeverity",
-                    "usr": "s:8BVPlayer13PLLogSeverityO"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer13PLLogSeverityO8allCasesSayACGvpZ",
-            "mangledName": "$s8BVPlayer13PLLogSeverityO8allCasesSayACGvpZ",
-            "moduleName": "BVPlayer",
-            "static": true,
-            "implicit": true,
-            "declAttributes": [
-              "Nonisolated"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BVPlayer.PLLogSeverity]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer13PLLogSeverityO8allCasesSayACGvgZ",
-                "mangledName": "$s8BVPlayer13PLLogSeverityO8allCasesSayACGvgZ",
-                "moduleName": "BVPlayer",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:8BVPlayer13PLLogSeverityO",
-        "mangledName": "$s8BVPlayer13PLLogSeverityO",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "enumRawTypeName": "Int",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CaseIterable",
-            "printedName": "CaseIterable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AllCases",
-                "printedName": "AllCases",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BVPlayer.PLLogSeverity]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogSeverity",
-                        "printedName": "BVPlayer.PLLogSeverity",
-                        "usr": "s:8BVPlayer13PLLogSeverityO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s12CaseIterableP",
-            "mangledName": "$ss12CaseIterableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -15600,230 +15129,6 @@
         ]
       },
       {
-        "kind": "Var",
-        "name": "pLog",
-        "printedName": "pLog",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "PLPrioritizingLogSystem",
-            "printedName": "BVPlayer.PLPrioritizingLogSystem",
-            "usr": "s:8BVPlayer23PLPrioritizingLogSystemC"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:8BVPlayer4pLogAA014PLPrioritizingB6SystemCvp",
-        "mangledName": "$s8BVPlayer4pLogAA014PLPrioritizingB6SystemCvp",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PLPrioritizingLogSystem",
-                "printedName": "BVPlayer.PLPrioritizingLogSystem",
-                "usr": "s:8BVPlayer23PLPrioritizingLogSystemC"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:8BVPlayer4pLogAA014PLPrioritizingB6SystemCvg",
-            "mangledName": "$s8BVPlayer4pLogAA014PLPrioritizingB6SystemCvg",
-            "moduleName": "BVPlayer",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PLPrioritizingLogSystem",
-        "printedName": "PLPrioritizingLogSystem",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "setEnabled",
-            "printedName": "setEnabled(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8BVPlayer23PLPrioritizingLogSystemC10setEnabledyySbF",
-            "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC10setEnabledyySbF",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "pitches",
-            "printedName": "pitches",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[BVPlayer.PLLogPitch]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PLLogPitch",
-                    "printedName": "BVPlayer.PLLogPitch",
-                    "usr": "s:8BVPlayer10PLLogPitchC"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvp",
-            "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BVPlayer.PLLogPitch]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogPitch",
-                        "printedName": "BVPlayer.PLLogPitch",
-                        "usr": "s:8BVPlayer10PLLogPitchC"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvg",
-                "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BVPlayer.PLLogPitch]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PLLogPitch",
-                        "printedName": "BVPlayer.PLLogPitch",
-                        "usr": "s:8BVPlayer10PLLogPitchC"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvs",
-                "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvs",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvM",
-                "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC7pitchesSayAA10PLLogPitchCGvM",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8BVPlayer23PLPrioritizingLogSystemC",
-        "mangledName": "$s8BVPlayer23PLPrioritizingLogSystemC",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "WebVTTError",
         "printedName": "WebVTTError",
@@ -18688,16 +17993,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -18786,384 +18081,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PLLogPitch",
-        "printedName": "PLLogPitch",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "createdDate",
-            "printedName": "createdDate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC11createdDate10Foundation0E0Vvp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC11createdDate10Foundation0E0Vvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC11createdDate10Foundation0E0Vvg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC11createdDate10Foundation0E0Vvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "logSeverity",
-            "printedName": "logSeverity",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC11logSeveritySivp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC11logSeveritySivp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC11logSeveritySivg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC11logSeveritySivg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "file",
-            "printedName": "file",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC4fileSSvp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC4fileSSvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC4fileSSvg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC4fileSSvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "line",
-            "printedName": "line",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC4lineSivp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC4lineSivp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC4lineSivg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC4lineSivg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "method",
-            "printedName": "method",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC6methodSSvp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC6methodSSvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC6methodSSvg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC6methodSSvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "message",
-            "printedName": "message",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC7messageSSvp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC7messageSSvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "HasStorage",
-              "Final",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC7messageSSvg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC7messageSSvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer10PLLogPitchC11descriptionSSvp",
-            "mangledName": "$s8BVPlayer10PLLogPitchC11descriptionSSvp",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer10PLLogPitchC11descriptionSSvg",
-                "mangledName": "$s8BVPlayer10PLLogPitchC11descriptionSSvg",
-                "moduleName": "BVPlayer",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8BVPlayer10PLLogPitchC",
-        "mangledName": "$s8BVPlayer10PLLogPitchC",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
           }
         ]
       },
@@ -19697,6 +18614,285 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "AnalyticsPlayerConfig",
+        "printedName": "AnalyticsPlayerConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "disabled",
+            "printedName": "disabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.AnalyticsPlayerConfig.Type) -> BVPlayer.AnalyticsPlayerConfig",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnalyticsPlayerConfig",
+                    "printedName": "BVPlayer.AnalyticsPlayerConfig",
+                    "usr": "s:8BVPlayer21AnalyticsPlayerConfigO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.AnalyticsPlayerConfig.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnalyticsPlayerConfig",
+                        "printedName": "BVPlayer.AnalyticsPlayerConfig",
+                        "usr": "s:8BVPlayer21AnalyticsPlayerConfigO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer21AnalyticsPlayerConfigO8disabledyA2CmF",
+            "mangledName": "$s8BVPlayer21AnalyticsPlayerConfigO8disabledyA2CmF",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BVPlayer.AnalyticsPlayerConfig.Type) -> (BVPlayer.AnalyticsConfig, BVPlayer.DefaultMetadata) -> BVPlayer.AnalyticsPlayerConfig",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BVPlayer.AnalyticsConfig, BVPlayer.DefaultMetadata) -> BVPlayer.AnalyticsPlayerConfig",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnalyticsPlayerConfig",
+                        "printedName": "BVPlayer.AnalyticsPlayerConfig",
+                        "usr": "s:8BVPlayer21AnalyticsPlayerConfigO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(analyticsConfig: BVPlayer.AnalyticsConfig, defaultMetadata: BVPlayer.DefaultMetadata)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnalyticsConfig",
+                            "printedName": "BVPlayer.AnalyticsConfig",
+                            "usr": "s:8BVPlayer15AnalyticsConfigC"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DefaultMetadata",
+                            "printedName": "BVPlayer.DefaultMetadata",
+                            "usr": "s:8BVPlayer15DefaultMetadataV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BVPlayer.AnalyticsPlayerConfig.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnalyticsPlayerConfig",
+                        "printedName": "BVPlayer.AnalyticsPlayerConfig",
+                        "usr": "s:8BVPlayer21AnalyticsPlayerConfigO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8BVPlayer21AnalyticsPlayerConfigO7enabledyAcA0bD0C_AA15DefaultMetadataVtcACmF",
+            "mangledName": "$s8BVPlayer21AnalyticsPlayerConfigO7enabledyAcA0bD0C_AA15DefaultMetadataVtcACmF",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8BVPlayer21AnalyticsPlayerConfigO",
+        "mangledName": "$s8BVPlayer21AnalyticsPlayerConfigO",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnalyticsConfig",
+        "printedName": "AnalyticsConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnalyticsConfig",
+                "printedName": "BVPlayer.AnalyticsConfig",
+                "usr": "s:8BVPlayer15AnalyticsConfigC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8BVPlayer15AnalyticsConfigC5tokenACSSSg_tcfc",
+            "mangledName": "$s8BVPlayer15AnalyticsConfigC5tokenACSSSg_tcfc",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8BVPlayer15AnalyticsConfigC",
+        "mangledName": "$s8BVPlayer15AnalyticsConfigC",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultMetadata",
+        "printedName": "DefaultMetadata",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(moduleConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultMetadata",
+                "printedName": "BVPlayer.DefaultMetadata",
+                "usr": "s:8BVPlayer15DefaultMetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8BVPlayer15DefaultMetadataV12moduleConfigACSDyS2SG_tcfc",
+            "mangledName": "$s8BVPlayer15DefaultMetadataV12moduleConfigACSDyS2SG_tcfc",
+            "moduleName": "BVPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8BVPlayer15DefaultMetadataV",
+        "mangledName": "$s8BVPlayer15DefaultMetadataV",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -19712,16 +18908,6 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "BVPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BVPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -34064,32 +33250,8 @@
         "children": [
           {
             "kind": "Function",
-            "name": "create",
-            "printedName": "create()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UniPlayer",
-                "printedName": "BVPlayer.UniPlayer",
-                "usr": "c:@M@BVPlayer@objc(cs)UniPlayer"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8BVPlayer16UniPlayerFactoryC6createAA0bC0CyFZ",
-            "mangledName": "$s8BVPlayer16UniPlayerFactoryC6createAA0bC0CyFZ",
-            "moduleName": "BVPlayer",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "create",
-            "printedName": "create(player:moduleConfig:)",
+            "name": "createPlayer",
+            "printedName": "createPlayer(playerConfig:analytics:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -34105,29 +33267,15 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "AnalyticsPlayerConfig",
+                "printedName": "BVPlayer.AnalyticsPlayerConfig",
                 "hasDefaultArg": true,
-                "usr": "s:SD"
+                "usr": "s:8BVPlayer21AnalyticsPlayerConfigO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8BVPlayer16UniPlayerFactoryC6create6player12moduleConfigAA0bC0CAA0bcH0C_SDyS2SGtFZ",
-            "mangledName": "$s8BVPlayer16UniPlayerFactoryC6create6player12moduleConfigAA0bC0CAA0bcH0C_SDyS2SGtFZ",
+            "usr": "s:8BVPlayer16UniPlayerFactoryC06createC012playerConfig9analyticsAA0bC0CAA0bcG0C_AA09AnalyticscG0OtFZ",
+            "mangledName": "$s8BVPlayer16UniPlayerFactoryC06createC012playerConfig9analyticsAA0bC0CAA0bcG0C_AA09AnalyticscG0OtFZ",
             "moduleName": "BVPlayer",
             "static": true,
             "declAttributes": [
@@ -34188,123 +33336,6 @@
         "name": "UniPlayerConfig",
         "printedName": "UniPlayerConfig",
         "children": [
-          {
-            "kind": "Var",
-            "name": "key",
-            "printedName": "key",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvp",
-            "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvp",
-            "moduleName": "BVPlayer",
-            "deprecated": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "Available",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvg",
-                "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvg",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvs",
-                "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvs",
-                "moduleName": "BVPlayer",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8BVPlayer15UniPlayerConfigC3keySSSgvM",
-                "mangledName": "$s8BVPlayer15UniPlayerConfigC3keySSSgvM",
-                "moduleName": "BVPlayer",
-                "deprecated": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Available"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
           {
             "kind": "Var",
             "name": "licenseKey",
@@ -37367,46 +36398,6 @@
         "name": "AnalyticsField",
         "printedName": "AnalyticsField",
         "children": [
-          {
-            "kind": "Var",
-            "name": "token",
-            "printedName": "token",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BVPlayer.AnalyticsField.Type) -> BVPlayer.AnalyticsField",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnalyticsField",
-                    "printedName": "BVPlayer.AnalyticsField",
-                    "usr": "s:8BVPlayer14AnalyticsFieldO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BVPlayer.AnalyticsField.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AnalyticsField",
-                        "printedName": "BVPlayer.AnalyticsField",
-                        "usr": "s:8BVPlayer14AnalyticsFieldO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8BVPlayer14AnalyticsFieldO5tokenyA2CmF",
-            "mangledName": "$s8BVPlayer14AnalyticsFieldO5tokenyA2CmF",
-            "moduleName": "BVPlayer",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
           {
             "kind": "Var",
             "name": "sessionId",
@@ -44348,41 +43339,6 @@
       "value": "\"drm\""
     },
     {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLLogSeverity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 663,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLLogSeverity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 666,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLLogSeverity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 673,
-      "length": 4,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLLogSeverity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 679,
-      "length": 7,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLLogSeverity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 688,
-      "length": 5,
-      "value": "5"
-    },
-    {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/HLSParser\/MasterPlaylist.swift",
       "kind": "Array",
       "offset": 160,
@@ -44826,7 +43782,7 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayerItemObserver.swift",
       "kind": "Array",
-      "offset": 336,
+      "offset": 346,
       "length": 309,
       "value": "[\\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>]"
     },
@@ -45053,13 +44009,6 @@
       "offset": 662,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/Prioritizing Log System\/PLPrioritizingLogSystem.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1341,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/SwiftWebVtt\/WebVTTParser.swift",
@@ -45724,6 +44673,13 @@
       "kind": "Array",
       "offset": 443,
       "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsPlayerConfig.swift",
+      "kind": "Dictionary",
+      "offset": 1521,
+      "length": 3,
       "value": "[]"
     },
     {
@@ -46602,13 +45558,6 @@
       "value": "\"bv.player.deviceId\""
     },
     {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayerFactory.swift",
-      "kind": "Dictionary",
-      "offset": 493,
-      "length": 3,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/FlagsRequest.swift",
       "kind": "StringLiteral",
       "offset": 468,
@@ -46917,13 +45866,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayer.swift",
-      "kind": "Dictionary",
-      "offset": 7590,
-      "length": 3,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Utilities\/SwiftWebVtt\/Scanner.swift",
       "kind": "IntegerLiteral",
       "offset": 573,
@@ -46975,56 +45917,49 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 620,
-      "length": 17,
-      "value": "\"analytics.token\""
-    },
-    {
-      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
-      "kind": "StringLiteral",
-      "offset": 709,
+      "offset": 622,
       "length": 22,
       "value": "\"analytics.session_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 809,
+      "offset": 722,
       "length": 23,
       "value": "\"analytics.resource_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 902,
+      "offset": 815,
       "length": 19,
       "value": "\"analytics.user_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 995,
+      "offset": 908,
       "length": 25,
       "value": "\"analytics.resource_type\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1235,
+      "offset": 1148,
       "length": 22,
       "value": "\"analytics.customData\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1420,
+      "offset": 1333,
       "length": 25,
       "value": "\"RESOURCE_TYPE_VOD_EVENT\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1462,
+      "offset": 1375,
       "length": 26,
       "value": "\"RESOURCE_TYPE_LIVE_EVENT\""
     },
