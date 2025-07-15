@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BVPlayer-Swift.h</key>
 		<data>
-		BK0u8Cb0U96twS2ZqwlnmfueBEs=
+		TvDyQYtjlg2LS2SnaVBMsnKRo/g=
 		</data>
 		<key>Headers/KKSPlayer.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		u8+RoIC9s9w4E+qR3cX9Mqug7GE=
+		oJKxu4jJXomzocGIsk35VPg+Qmc=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		M50KBnCi8dcNHsy2G+xDzMjhLv4=
+		yXeLqINj2xtH9iq+h2RAIbvZ6HI=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ik4OeaAdMtywhtLXgHxAF/uQT/4=
+		Pp9CzyuWQK/h3HUpXkINnHdpzlw=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1869HNQRD7m914WkrCLDhZmcWtw=
+		2bTHa+/aRR8xmVrlPBGtfPJNJxI=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ik4OeaAdMtywhtLXgHxAF/uQT/4=
+		Pp9CzyuWQK/h3HUpXkINnHdpzlw=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4kElp0OlIwzc0QlqZ0t/HmyUhwM=
+		mSsp7poCkVdmRK54LYj0MQQ8f/o=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		M50KBnCi8dcNHsy2G+xDzMjhLv4=
+		yXeLqINj2xtH9iq+h2RAIbvZ6HI=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YDYMd+jaeui7L+HujpLo7RlfO2U=
+		HoosdF25KcrLXukydpDcb83uV04=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kcM7Ileg1k9ylEs9RAgcb0ajRCc=
+		kFm/pqYKfY7veTR4TQptSNLUR4A=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YDYMd+jaeui7L+HujpLo7RlfO2U=
+		HoosdF25KcrLXukydpDcb83uV04=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EA++ODAs7dUIeJdoE9mPL3Um0WQ=
+		30zmQJWtGTaJmzU2+jiwnHb4NcU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J/E83AXK6m8+8V2dGo4wb/RfVWtpHHTdomZgl1AWKZo=
+			zY/RVXOIiqDd46IIEioD7lZ++uuCswDPPUNAI94E3PQ=
 			</data>
 		</dict>
 		<key>Headers/KKSPlayer.h</key>
@@ -120,70 +120,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hL9gyG13brljyHcb3YGzYc63K30Kr48bt3pPIH+avA4=
+			yFP0FrcxZxmDxpagcQ4i6AZZ5HMVWuQP5m/IMcly3mU=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3wnW5+URRYNiNiYqsXE/byt4Ck9po9ABCa5irE+AoDs=
+			LIGOoRCMGign8O7bU56QQull1cSRPtNNXJDLY5CbRjM=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g30RvpnEghjs0ATJYXJJztcRbMGit61d6hPJJMOGUZQ=
+			aJdLhgkiN1fQ+YoNqRdCB9I39bz4xH5mEV/VoX8YCEA=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3wnW5+URRYNiNiYqsXE/byt4Ck9po9ABCa5irE+AoDs=
+			LIGOoRCMGign8O7bU56QQull1cSRPtNNXJDLY5CbRjM=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vochv2lb7m31/JB8JjLhVyOSKOC6KAjlq3hDhbMxbpQ=
+			pvqFgYBuI2kNrQwGGALV1a3NEgf9S7uijY1ZIznT5gQ=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hL9gyG13brljyHcb3YGzYc63K30Kr48bt3pPIH+avA4=
+			yFP0FrcxZxmDxpagcQ4i6AZZ5HMVWuQP5m/IMcly3mU=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hHvNH+CXzFnI5lt0QDYvaoV4/eIS9h/d8mBcaSskzeY=
+			OzKLUR3GaYCfCEhHchpu0khixaCtI8a3ZZ2dAEdadbg=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FAvXagKIGaMMGC1vUUJLZD2jC9Lv9r0+TVd8zhM4r5M=
+			Ecwa4Ioe9sF8p+LCDJ3CXKeGPpcdDmFJa05QjMIzvo0=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hHvNH+CXzFnI5lt0QDYvaoV4/eIS9h/d8mBcaSskzeY=
+			OzKLUR3GaYCfCEhHchpu0khixaCtI8a3ZZ2dAEdadbg=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QFcWeqL8SGOVcL9ApNlIQCBza7KD1yFHoQ8RjbQ2JRM=
+			lg+Im6BWU79M7ogrLrdMtJfRLHybWRqMbyXjUMgIaZ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

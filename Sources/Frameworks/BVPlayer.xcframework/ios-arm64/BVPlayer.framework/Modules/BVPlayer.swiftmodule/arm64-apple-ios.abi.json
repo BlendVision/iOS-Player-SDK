@@ -4796,8 +4796,10 @@
             "usr": "s:8BVPlayer9UniSourceC11isULLStreamSbvp",
             "mangledName": "$s8BVPlayer9UniSourceC11isULLStreamSbvp",
             "moduleName": "BVPlayer",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "accessors": [
               {
@@ -5303,14 +5305,27 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8BVPlayer7LogDataV12eventContentSSvp",
-            "mangledName": "$s8BVPlayer7LogDataV12eventContentSSvp",
+            "usr": "s:8BVPlayer7LogDataV12eventContentSDySSypGvp",
+            "mangledName": "$s8BVPlayer7LogDataV12eventContentSDySSypGvp",
             "moduleName": "BVPlayer",
             "declAttributes": [
               "HasStorage",
@@ -5325,14 +5340,27 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8BVPlayer7LogDataV12eventContentSSvg",
-                "mangledName": "$s8BVPlayer7LogDataV12eventContentSSvg",
+                "usr": "s:8BVPlayer7LogDataV12eventContentSDySSypGvg",
+                "mangledName": "$s8BVPlayer7LogDataV12eventContentSDySSypGvg",
                 "moduleName": "BVPlayer",
                 "implicit": true,
                 "accessorKind": "get"
@@ -5349,14 +5377,27 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8BVPlayer7LogDataV12eventContentSSvs",
-                "mangledName": "$s8BVPlayer7LogDataV12eventContentSSvs",
+                "usr": "s:8BVPlayer7LogDataV12eventContentSDySSypGvs",
+                "mangledName": "$s8BVPlayer7LogDataV12eventContentSDySSypGvs",
                 "moduleName": "BVPlayer",
                 "implicit": true,
                 "accessorKind": "set"
@@ -5373,8 +5414,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8BVPlayer7LogDataV12eventContentSSvM",
-                "mangledName": "$s8BVPlayer7LogDataV12eventContentSSvM",
+                "usr": "s:8BVPlayer7LogDataV12eventContentSDySSypGvM",
+                "mangledName": "$s8BVPlayer7LogDataV12eventContentSDySSypGvM",
                 "moduleName": "BVPlayer",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11960,9 +12001,11 @@
             "usr": "s:8BVPlayer17UniPlaybackConfigC23isLatencyMonitorEnabledSbvp",
             "mangledName": "$s8BVPlayer17UniPlaybackConfigC23isLatencyMonitorEnabledSbvp",
             "moduleName": "BVPlayer",
+            "deprecated": true,
             "declAttributes": [
               "HasStorage",
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -12025,7 +12068,11 @@
                 "usr": "s:8BVPlayer17UniPlaybackConfigC23isLatencyMonitorEnabledSbvM",
                 "mangledName": "$s8BVPlayer17UniPlaybackConfigC23isLatencyMonitorEnabledSbvM",
                 "moduleName": "BVPlayer",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -15466,6 +15513,30 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "BVPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "BVPlayer",
         "declAttributes": [
           "RawDocComment"
@@ -18826,7 +18897,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(moduleConfig:)",
+            "printedName": "init(moduleConfig:customData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -18854,11 +18925,31 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8BVPlayer15DefaultMetadataV12moduleConfigACSDyS2SG_tcfc",
-            "mangledName": "$s8BVPlayer15DefaultMetadataV12moduleConfigACSDyS2SG_tcfc",
+            "usr": "s:8BVPlayer15DefaultMetadataV12moduleConfig10customDataACSDyS2SG_SDySSypGtcfc",
+            "mangledName": "$s8BVPlayer15DefaultMetadataV12moduleConfig10customDataACSDyS2SG_SDySSypGtcfc",
             "moduleName": "BVPlayer",
             "declAttributes": [
               "AccessControl",
@@ -24914,6 +25005,16 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -25050,6 +25151,16 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -32457,6 +32568,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "BVPlayer"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UniLoggerListener",
         "printedName": "UniLoggerListener",
@@ -36594,7 +36712,9 @@
             "usr": "s:8BVPlayer14AnalyticsFieldO10customDatayA2CmF",
             "mangledName": "$s8BVPlayer14AnalyticsFieldO10customDatayA2CmF",
             "moduleName": "BVPlayer",
+            "deprecated": true,
             "declAttributes": [
+              "Available",
               "RawDocComment"
             ]
           },
@@ -43614,49 +43734,49 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 183,
+      "offset": 187,
       "length": 14,
       "value": "\"playback_log\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 226,
+      "offset": 230,
       "length": 15,
       "value": "\"heartbeat_log\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 273,
+      "offset": 277,
       "length": 19,
       "value": "\"refresh_token_log\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 375,
+      "offset": 383,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 413,
+      "offset": 421,
       "length": 12,
       "value": "\"event_name\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 454,
+      "offset": 462,
       "length": 15,
       "value": "\"event_content\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/LogData.swift",
       "kind": "StringLiteral",
-      "offset": 495,
+      "offset": 503,
       "length": 12,
       "value": "\"event_time\""
     },
@@ -43782,7 +43902,7 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Player\/UniPlayerItemObserver.swift",
       "kind": "Array",
-      "offset": 346,
+      "offset": 430,
       "length": 309,
       "value": "[\\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>, \\.<NOT_IMPLEMENTED>]"
     },
@@ -43873,56 +43993,56 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 984,
+      "offset": 844,
       "length": 15,
       "value": "\"license_token\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1024,
+      "offset": 884,
       "length": 20,
       "value": "\"available_features\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1105,
+      "offset": 965,
       "length": 18,
       "value": "\"token_expired_at\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1152,
+      "offset": 1012,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1231,
+      "offset": 1091,
       "length": 16,
       "value": "\"allow_playback\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1278,
+      "offset": 1138,
       "length": 9,
       "value": "\"buy_pse\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1318,
+      "offset": 1178,
       "length": 9,
       "value": "\"buy_ull\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Network\/LicenseKeyRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1364,
+      "offset": 1224,
       "length": 20,
       "value": "\"allow_external_ull\""
     },
@@ -44543,6 +44663,20 @@
       "value": "\":\""
     },
     {
+      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Metrics\/MetricsCollector.swift",
+      "kind": "Array",
+      "offset": 299,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Metrics\/MetricsCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 507,
+      "length": 21,
+      "value": "\"yyyy-MM-dd_HH-mm-ss\""
+    },
+    {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Source\/UniAssetLoader.swift",
       "kind": "StringLiteral",
       "offset": 382,
@@ -44678,7 +44812,14 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsPlayerConfig.swift",
       "kind": "Dictionary",
-      "offset": 1521,
+      "offset": 1728,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsPlayerConfig.swift",
+      "kind": "Dictionary",
+      "offset": 1761,
       "length": 3,
       "value": "[]"
     },
@@ -45553,7 +45694,7 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Logs\/UniLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1020,
+      "offset": 1068,
       "length": 20,
       "value": "\"bv.player.deviceId\""
     },
@@ -45910,58 +46051,65 @@
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 538,
+      "offset": 470,
       "length": 12,
       "value": "\"analytics.\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 554,
       "length": 22,
       "value": "\"analytics.session_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 722,
+      "offset": 654,
       "length": 23,
       "value": "\"analytics.resource_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 815,
+      "offset": 747,
       "length": 19,
       "value": "\"analytics.user_id\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 908,
+      "offset": 840,
       "length": 25,
       "value": "\"analytics.resource_type\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1148,
-      "length": 22,
-      "value": "\"analytics.customData\""
+      "offset": 1458,
+      "length": 23,
+      "value": "\"analytics.custom_data\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1333,
+      "offset": 1644,
       "length": 25,
       "value": "\"RESOURCE_TYPE_VOD_EVENT\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
       "kind": "StringLiteral",
-      "offset": 1375,
+      "offset": 1686,
       "length": 26,
       "value": "\"RESOURCE_TYPE_LIVE_EVENT\""
+    },
+    {
+      "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Modules\/Analytics\/AnalyticsField.swift",
+      "kind": "StringLiteral",
+      "offset": 1735,
+      "length": 23,
+      "value": "\"analytics.custom_data\""
     },
     {
       "filePath": "\/Users\/cptios\/builds\/t3_asGX6v\/0\/playback\/kksplayer\/KKSPlayer\/Unify\/Configs\/RemoteControlConfig.swift",

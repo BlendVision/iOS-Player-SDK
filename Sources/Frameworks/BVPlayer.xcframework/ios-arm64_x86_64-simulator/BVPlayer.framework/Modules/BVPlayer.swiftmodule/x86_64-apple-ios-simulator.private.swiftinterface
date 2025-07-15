@@ -76,6 +76,7 @@ public struct MasterPlaylist {
   public var isActive: Swift.Bool {
     get
   }
+  @available(*, deprecated, message: "isULLStream is deprecated and no longer functional, always returns false")
   public var isULLStream: Swift.Bool {
     get
   }
@@ -95,7 +96,7 @@ extension BVPlayer.UniSource {
 public struct LogData {
   public var eventType: Swift.String
   public var eventName: Swift.String
-  public var eventContent: Swift.String
+  public var eventContent: [Swift.String : Any]
   public var eventTime: Swift.String
 }
 @_hasMissingDesignatedInitializers public class UniBufferMediaTypeConfig {
@@ -361,6 +362,7 @@ public protocol UniEvent {
 public class UniPlaybackConfig {
   public var isAutoplayEnabled: Swift.Bool
   public var isMuted: Swift.Bool
+  @available(*, deprecated, message: "This property is deprecated and will be removed in a future version.")
   public var isLatencyMonitorEnabled: Swift.Bool
   public init()
   @objc deinit
@@ -605,7 +607,7 @@ public class AnalyticsConfig {
   @objc deinit
 }
 public struct DefaultMetadata {
-  public init(moduleConfig: [Swift.String : Swift.String] = [:])
+  public init(moduleConfig: [Swift.String : Swift.String] = [:], customData: [Swift.String : Any] = [:])
 }
 @_hasMissingDesignatedInitializers public class UniLogEvent {
   public var name: BVPlayer.UniLogEvent.EventName {
@@ -1374,6 +1376,7 @@ public enum AnalyticsField : Swift.String {
   case resourceId
   case userId
   case resourceType
+  @available(*, deprecated, message: "This field is deprecated and will be removed in a future version.")
   case customData
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String

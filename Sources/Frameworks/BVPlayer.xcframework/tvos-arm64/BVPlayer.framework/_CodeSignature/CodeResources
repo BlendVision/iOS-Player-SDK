@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BVPlayer-Swift.h</key>
 		<data>
-		kdBj7FF1FuD0NDFNQjW2MxITHR8=
+		LRKXoLgZeX2ea/XIt4KoXzBO1K0=
 		</data>
 		<key>Headers/KKSPlayer.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CcbcXh+rhWicciuoMVhlmIR6Fnk=
+		3f1Ctkcy5mYQTX+m8vgYi2qJQ3E=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.abi.json</key>
 		<data>
-		7Ryk13GQljs1vx5sruBiFI9Y2e0=
+		ezyX2Z9odmBrGByvVCdu/iVCDNw=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<data>
-		r10XS13UjIqXdV/9kvYPb94VXJc=
+		wQIBKYr0hzuy4wzJ83d1AW0/iI8=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<data>
-		AmkBFM9zrXXjrT20M1DVvmeEiTM=
+		vDzsfY0e4s6pNtA/Ap7UXo6l0Po=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<data>
-		r10XS13UjIqXdV/9kvYPb94VXJc=
+		wQIBKYr0hzuy4wzJ83d1AW0/iI8=
 		</data>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<data>
-		GhJ4gsUZm7AVaW+wvlSaZzS1Bqk=
+		apnT/poY1q9pa4m7q6nca54KLd4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JnoUcqTOCj5qOOTko7nO2k51JGwuefjQxeWx7/YoP1U=
+			8HN/4VFKT5j25gxP4fmL8G6FPxZKkLlOC6r+yOygBFA=
 			</data>
 		</dict>
 		<key>Headers/KKSPlayer.h</key>
@@ -100,35 +100,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0cThlYOG0Gmdz9kxV2/bgFjJEHtfbiYaetFkndqlaoA=
+			KAmWctzoMeBbh6jMBv/10YP8kAQfWTPKn/5pErYxXMo=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xulZD62l0D+p+85IUkHhYxOV56RBrd4P8TBvXID31tY=
+			Z5fwub5PXjt1PPuAh9HH66PIBhtx/t1rzKFoXv8e754=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zzCq1k3A3FHQqn+0skeeZrcMLvcvekGlPxwsaDPTgdM=
+			+A5NCvUtpPAkEBm56TKi5bLcz9HJGaQGswjBJW2T1x4=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xulZD62l0D+p+85IUkHhYxOV56RBrd4P8TBvXID31tY=
+			Z5fwub5PXjt1PPuAh9HH66PIBhtx/t1rzKFoXv8e754=
 			</data>
 		</dict>
 		<key>Modules/BVPlayer.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O7jQ5eKSfo7J1K8qWdtReRqcIduV7SfpxPnY3D3QR+M=
+			XeeOQ5IRkz6RYyRO3pJRUfiLZr72BUSU8WL65MqFGFs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

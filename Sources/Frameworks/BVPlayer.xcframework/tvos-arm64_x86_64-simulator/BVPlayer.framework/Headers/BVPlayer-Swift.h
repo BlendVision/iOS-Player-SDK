@@ -306,6 +306,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// Analytics is primarily utilized to monitor the health and performance of the player.
 /// <h3>Usage Example:</h3>
 /// When listening to the analytic logs, you can add yourself as a listener to the Analytics object using the add(listener:) method.
@@ -440,14 +441,13 @@ SWIFT_CLASS("_TtC8BVPlayer9UniPlayer")
 @end
 
 
-
-
 @class AVAssetResourceLoader;
 @class AVAssetResourceLoadingRequest;
 
 @interface UniPlayer (SWIFT_EXTENSION(BVPlayer)) <AVAssetResourceLoaderDelegate>
 - (BOOL)resourceLoader:(AVAssetResourceLoader * _Nonnull)resourceLoader shouldWaitForLoadingOfRequestedResource:(AVAssetResourceLoadingRequest * _Nonnull)loadingRequest SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 
@@ -809,6 +809,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// Analytics is primarily utilized to monitor the health and performance of the player.
 /// <h3>Usage Example:</h3>
 /// When listening to the analytic logs, you can add yourself as a listener to the Analytics object using the add(listener:) method.
@@ -943,14 +944,13 @@ SWIFT_CLASS("_TtC8BVPlayer9UniPlayer")
 @end
 
 
-
-
 @class AVAssetResourceLoader;
 @class AVAssetResourceLoadingRequest;
 
 @interface UniPlayer (SWIFT_EXTENSION(BVPlayer)) <AVAssetResourceLoaderDelegate>
 - (BOOL)resourceLoader:(AVAssetResourceLoader * _Nonnull)resourceLoader shouldWaitForLoadingOfRequestedResource:(AVAssetResourceLoadingRequest * _Nonnull)loadingRequest SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 
